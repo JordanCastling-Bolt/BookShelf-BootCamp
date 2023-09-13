@@ -48,12 +48,16 @@ namespace PROG7132
             if (Generated_List.SelectedItem == null) return;
             Generated_List.DoDragDrop(Generated_List.SelectedItem, DragDropEffects.Move);
         }
-
+        /// <summary>
+        /// Handles mouse and drag events for drag-and-drop functionality in the list box.
+        /// </summary>
         private void listBox1_DragOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Move;
         }
-
+        /// <summary>
+        /// Handles mouse and drag events for drag-and-drop functionality in the list box.
+        /// </summary>
         private void listBox1_DragDrop(object sender, DragEventArgs e)
         {
             Point point = Generated_List.PointToClient(new Point(e.X, e.Y));
