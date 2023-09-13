@@ -83,6 +83,7 @@
             // 
             // menuIdentifyingAreas
             // 
+            this.menuIdentifyingAreas.Enabled = false;
             this.menuIdentifyingAreas.Name = "menuIdentifyingAreas";
             this.menuIdentifyingAreas.Size = new System.Drawing.Size(127, 19);
             this.menuIdentifyingAreas.Text = "Identifying Areas";

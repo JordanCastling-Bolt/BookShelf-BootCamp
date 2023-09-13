@@ -4,3 +4,9 @@ C:\Users\Jordan\Documents\PROG Projects\Library_Classlib\obj\Debug\Library_Class
 C:\Users\Jordan\Documents\PROG Projects\Library_Classlib\obj\Debug\Library_Classlib.csproj.CoreCompileInputs.cache
 C:\Users\Jordan\Documents\PROG Projects\Library_Classlib\obj\Debug\Library_Classlib.dll
 C:\Users\Jordan\Documents\PROG Projects\Library_Classlib\obj\Debug\Library_Classlib.pdb
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Library_Classlib.dll
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Library_Classlib.pdb
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\obj\Debug\Library_Classlib.csproj.AssemblyReference.cache
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\obj\Debug\Library_Classlib.csproj.CoreCompileInputs.cache
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\obj\Debug\Library_Classlib.dll
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\obj\Debug\Library_Classlib.pdb
