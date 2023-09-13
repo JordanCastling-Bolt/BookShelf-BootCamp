@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace PROG7132
 {
     /// <summary>
-    /// Main form to handle the interaction with call numbers.
+    /// Main form to handle the interaction with call number manager and GUI.
     /// </summary>
     public partial class Form1 : Form
     {
