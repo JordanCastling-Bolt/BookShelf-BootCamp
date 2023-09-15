@@ -71,7 +71,7 @@
             this.replaceBooksBar.Location = new System.Drawing.Point(140, 244);
             this.replaceBooksBar.Maximum = 10;
             this.replaceBooksBar.Name = "replaceBooksBar";
-            this.replaceBooksBar.Size = new System.Drawing.Size(497, 23);
+            this.replaceBooksBar.Size = new System.Drawing.Size(568, 23);
             this.replaceBooksBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.replaceBooksBar.TabIndex = 5;
             // 
@@ -123,7 +123,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(637, 267);
+            this.ClientSize = new System.Drawing.Size(708, 267);
             this.Controls.Add(this.lblProgressInfo);
             this.Controls.Add(this.replaceBooksBar);
             this.Controls.Add(this.btnGenerateCallNumbers);
