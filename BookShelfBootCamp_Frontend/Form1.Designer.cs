@@ -19,7 +19,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnCheckOrder = new System.Windows.Forms.Button();
-            this.Generated_List = new System.Windows.Forms.ListBox();
             this.btnGenerateCallNumbers = new System.Windows.Forms.Button();
             this.replaceBooksBar = new System.Windows.Forms.ProgressBar();
             this.menuReplacingBooks = new System.Windows.Forms.ToolStripMenuItem();
@@ -27,6 +26,7 @@
             this.menuFindingCallNumbers = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.lblProgressInfo = new System.Windows.Forms.Label();
+            this.GeneratedListView = new System.Windows.Forms.ListView();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -34,7 +34,7 @@
             // 
             this.btnCheckOrder.AutoSize = true;
             this.btnCheckOrder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCheckOrder.Location = new System.Drawing.Point(323, 186);
+            this.btnCheckOrder.Location = new System.Drawing.Point(319, 682);
             this.btnCheckOrder.Name = "btnCheckOrder";
             this.btnCheckOrder.Size = new System.Drawing.Size(77, 23);
             this.btnCheckOrder.TabIndex = 1;
@@ -42,22 +42,11 @@
             this.btnCheckOrder.UseVisualStyleBackColor = true;
             this.btnCheckOrder.Click += new System.EventHandler(this.btnCheckOrder_Click);
             // 
-            // Generated_List
-            // 
-            this.Generated_List.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Generated_List.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Generated_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generated_List.FormattingEnabled = true;
-            this.Generated_List.Location = new System.Drawing.Point(183, 37);
-            this.Generated_List.Name = "Generated_List";
-            this.Generated_List.Size = new System.Drawing.Size(196, 143);
-            this.Generated_List.TabIndex = 6;
-            // 
             // btnGenerateCallNumbers
             // 
             this.btnGenerateCallNumbers.AutoSize = true;
             this.btnGenerateCallNumbers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnGenerateCallNumbers.Location = new System.Drawing.Point(162, 186);
+            this.btnGenerateCallNumbers.Location = new System.Drawing.Point(140, 682);
             this.btnGenerateCallNumbers.Name = "btnGenerateCallNumbers";
             this.btnGenerateCallNumbers.Size = new System.Drawing.Size(126, 23);
             this.btnGenerateCallNumbers.TabIndex = 4;
@@ -68,10 +57,10 @@
             // replaceBooksBar
             // 
             this.replaceBooksBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.replaceBooksBar.Location = new System.Drawing.Point(140, 244);
+            this.replaceBooksBar.Location = new System.Drawing.Point(140, 724);
             this.replaceBooksBar.Maximum = 10;
             this.replaceBooksBar.Name = "replaceBooksBar";
-            this.replaceBooksBar.Size = new System.Drawing.Size(568, 23);
+            this.replaceBooksBar.Size = new System.Drawing.Size(515, 23);
             this.replaceBooksBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.replaceBooksBar.TabIndex = 5;
             // 
@@ -105,17 +94,26 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip.Size = new System.Drawing.Size(140, 267);
+            this.menuStrip.Size = new System.Drawing.Size(140, 747);
             this.menuStrip.TabIndex = 0;
             // 
             // lblProgressInfo
             // 
             this.lblProgressInfo.AutoSize = true;
             this.lblProgressInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgressInfo.Location = new System.Drawing.Point(159, 228);
+            this.lblProgressInfo.Location = new System.Drawing.Point(143, 708);
             this.lblProgressInfo.Name = "lblProgressInfo";
             this.lblProgressInfo.Size = new System.Drawing.Size(0, 13);
             this.lblProgressInfo.TabIndex = 7;
+            // 
+            // GeneratedListView
+            // 
+            this.GeneratedListView.HideSelection = false;
+            this.GeneratedListView.Location = new System.Drawing.Point(213, 0);
+            this.GeneratedListView.Name = "GeneratedListView";
+            this.GeneratedListView.Size = new System.Drawing.Size(144, 676);
+            this.GeneratedListView.TabIndex = 8;
+            this.GeneratedListView.UseCompatibleStateImageBehavior = false;
             // 
             // Form1
             // 
@@ -123,11 +121,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(708, 267);
+            this.ClientSize = new System.Drawing.Size(655, 747);
+            this.Controls.Add(this.GeneratedListView);
             this.Controls.Add(this.lblProgressInfo);
             this.Controls.Add(this.replaceBooksBar);
             this.Controls.Add(this.btnGenerateCallNumbers);
-            this.Controls.Add(this.Generated_List);
             this.Controls.Add(this.btnCheckOrder);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -143,7 +141,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnCheckOrder;
-        private System.Windows.Forms.ListBox Generated_List;
         private System.Windows.Forms.Button btnGenerateCallNumbers;
         private System.Windows.Forms.ProgressBar replaceBooksBar;
         private System.Windows.Forms.ToolStripMenuItem menuReplacingBooks;
@@ -151,6 +148,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuFindingCallNumbers;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.Label lblProgressInfo;
+        private System.Windows.Forms.ListView GeneratedListView;
     }
 }
 

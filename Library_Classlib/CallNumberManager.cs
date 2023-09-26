@@ -79,17 +79,48 @@ namespace Library_Classlib
         }
 
         /// <summary>
-        /// Checks if the given ordering of call numbers is either in numerical or alphabetical order.
+        /// Checks if the given list of call numbers is in correct order, either numerically or alphabetically.
         /// </summary>
         /// <param name="userOrder">The list of call numbers to check.</param>
         /// <returns>
         /// True if the ordering is correct, false otherwise.
         /// </returns>
-        public bool CheckOrdering(List<string> userOrder)
+        public static bool CheckOrdering(List<string> userOrder)
         {
-            bool isNumericalOrdering = userOrder.SequenceEqual(userOrder.OrderBy(n => n.Split(' ')[0]));
-            bool isAlphabeticalOrdering = userOrder.SequenceEqual(userOrder.OrderBy(n => n.Split(' ')[1]));
-            return isNumericalOrdering || isAlphabeticalOrdering;
+            // Initialize flags to track ordering types
+            bool isNumericalOrder = true; // Indicates numerical order
+            bool isAlphabeticalOrder = true; // Indicates alphabetical order
+
+            // Loop through the user's ordered list
+            for (int i = 1; i < userOrder.Count; i++)
+            {
+                // Split the call numbers into their components
+                string[] partsA = userOrder[i - 1].Split(' ');
+                string[] partsB = userOrder[i].Split(' ');
+
+                // Extract and compare the main class and subcategory parts
+                int mainClassA = int.Parse(partsA[0].Split('.')[0]);
+                int subcategoryA = int.Parse(partsA[0].Split('.')[1]);
+
+                int mainClassB = int.Parse(partsB[0].Split('.')[0]);
+                int subcategoryB = int.Parse(partsB[0].Split('.')[1]);
+
+                // Check if the main class or subcategory is out of order
+                if (mainClassA > mainClassB ||
+                    (mainClassA == mainClassB && subcategoryA > subcategoryB))
+                {
+                    isNumericalOrder = false;
+                }
+
+                // Compare the author surnames alphabetically
+                if (string.Compare(partsA[1], partsB[1]) > 0)
+                {
+                    isAlphabeticalOrder = false;
+                }
+            }
+
+            // The order is correct if it's either numerical or alphabetical
+            return isNumericalOrder || isAlphabeticalOrder;
         }
 
 
