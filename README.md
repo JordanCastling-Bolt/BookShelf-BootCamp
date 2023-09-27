@@ -59,3 +59,4 @@
 
 - ChatGPT was used throughout the project
 - <div class="csl-entry">Sommerville, I. (2011). <i>Software Engineering: Principles and Practice</i> (9th ed.). Pearson Education Inc. https://doi.org/10.1049/sej.1994.0029</div>
+- <div class="csl-entry">Jamro, M. (2018). <i>C# Data Structures and Algorithms</i>. Packt Publishing.</div>
