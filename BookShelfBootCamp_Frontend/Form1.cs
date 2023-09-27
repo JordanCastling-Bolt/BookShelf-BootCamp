@@ -116,11 +116,10 @@ namespace PROG7132
             try
             {
                 // Book images
-                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book.jpg"));
-                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book2.jpg"));
-                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book3.jpg"));
-                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book4.jpg"));
-                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book5.jpg"));
+                bookImageList.Images.Add(Image.FromFile("Resources/book.jpg"));
+                bookImageList.Images.Add(Image.FromFile("Resources/book2.jpg"));
+                bookImageList.Images.Add(Image.FromFile("Resources/book3.jpg"));
+                bookImageList.Images.Add(Image.FromFile("Resources/book5.jpg"));
             }
             catch (Exception ex)
             {

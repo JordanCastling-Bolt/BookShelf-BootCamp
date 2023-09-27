@@ -123,3 +123,8 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\o
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.csproj.CopyComplete
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.exe
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.pdb
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Resources\book.jpg
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Resources\book2.jpg
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Resources\book3.jpg
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Resources\book4.jpg
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Resources\book5.jpg
