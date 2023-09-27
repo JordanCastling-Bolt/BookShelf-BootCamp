@@ -74,7 +74,7 @@ namespace Library_Classlib
                 callNumbers.Add(callNumber);
             }
             // Set the flag to true once the list is generated
-            isListGenerated = true; 
+            isListGenerated = true;
             return callNumbers;
         }
 
@@ -158,7 +158,7 @@ namespace Library_Classlib
 
                 return true;
             }
-            else 
+            else
             {
                 OnProgressUpdate?.Invoke(currentProgress, 10 - currentProgress, "Incorrect ordering. Try again!");
                 return false;

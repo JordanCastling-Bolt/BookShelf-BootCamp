@@ -170,7 +170,7 @@ namespace PROG7132
                 // Add this new image to your image list
                 bookImageList.Images.Add(image);
 
-                // Create a new ListViewItem without setting its text, so it doesn't appear next to the image.
+                // Create a new ListViewItem
                 ListViewItem item = new ListViewItem("")
                 {
                     ImageIndex = bookImageList.Images.Count - 1, // Last image added
