@@ -5,6 +5,7 @@
 - **Student ID**: ST10114132
 - **Course**: BCAD Year 3 Group 1 : PROG7312 POE Part 1B
 - **Date**: 2023/09/27
+- **Repo**: https://github.com/JordanCastling-Bolt/BookShelf-BootCamp
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -51,3 +52,10 @@
 - **Replacing Books**: Allows the user to practice organizing books by their call numbers.
 - **Progress Tracking**: Keeps track of the user's progress in organizing the books.
 - **Drag-and-Drop Interface**: Provides an intuitive way to reorder books.
+
+---
+
+### Refrences 
+
+- ChatGPT was used throughout the project
+- <div class="csl-entry">Sommerville, I. (2011). <i>Software Engineering: Principles and Practice</i> (9th ed.). Pearson Education Inc. https://doi.org/10.1049/sej.1994.0029</div>
