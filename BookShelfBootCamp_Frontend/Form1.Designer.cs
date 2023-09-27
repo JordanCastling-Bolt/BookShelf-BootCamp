@@ -27,7 +27,9 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.lblProgressInfo = new System.Windows.Forms.Label();
             this.GeneratedListView = new System.Windows.Forms.ListView();
+            this.achievementBadge = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.achievementBadge)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCheckOrder
@@ -115,6 +117,15 @@
             this.GeneratedListView.TabIndex = 8;
             this.GeneratedListView.UseCompatibleStateImageBehavior = false;
             // 
+            // achievementBadge
+            // 
+            this.achievementBadge.Location = new System.Drawing.Point(421, 30);
+            this.achievementBadge.Name = "achievementBadge";
+            this.achievementBadge.Size = new System.Drawing.Size(196, 154);
+            this.achievementBadge.TabIndex = 9;
+            this.achievementBadge.TabStop = false;
+            this.achievementBadge.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +133,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(655, 747);
+            this.Controls.Add(this.achievementBadge);
             this.Controls.Add(this.GeneratedListView);
             this.Controls.Add(this.lblProgressInfo);
             this.Controls.Add(this.replaceBooksBar);
@@ -134,6 +146,7 @@
             this.Text = "Bookshelf Bootcamp";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.achievementBadge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +162,7 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.Label lblProgressInfo;
         private System.Windows.Forms.ListView GeneratedListView;
+        private System.Windows.Forms.PictureBox achievementBadge;
     }
 }
 

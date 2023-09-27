@@ -25,11 +25,16 @@ namespace PROG7132
         {
             InitializeComponent();
 
+            //Setting up achievement badge feature
+            achievementBadge.Visible = false;
+            achievementBadge.Image = Properties.Resources.badge; 
+
+
             // Initialize the ImageList before assigning it to the ListView
             bookImageList = new ImageList();
             bookImageList.ImageSize = new Size(130, 60);
             bookImageList.ColorDepth = ColorDepth.Depth32Bit;
-            bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book.jpg"));
+            bookImageList.Images.Add(Image.FromFile("Resources/book.jpg"));
 
             // Setting up drag and drop functionality and registering progress update event
             GeneratedListView.AllowDrop = true;
@@ -52,6 +57,14 @@ namespace PROG7132
         {
             lblProgressInfo.Text = $"{message} {progress} out of 10 correct. {remainingOrders} remaining.";
             replaceBooksBar.Value = progress;
+            if (progress == 10)
+            {
+                achievementBadge.Visible = true;
+            }
+            else
+            {
+                achievementBadge.Visible = false;
+            }
         }
 
         /// <summary>

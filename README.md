@@ -35,22 +35,24 @@
 
 3. **Reorder Books**: 
     - Select a book and drag it up or down the list to reorder the selection.
+    - NB: The book needs to be clicked on first to be selected.
 
 4. **Check Order**: 
     - Click the 'Check Order' button to validate the order. The program will indicate whether the re-order is correct or not at the bottom of the page.
 
 5. **Progress Tracking**: 
     - A progress bar and label will update to show how many re-orders have been correctly executed and how many are left to complete the progress bar.
+    - Achievement badge unlocks after 10 successful call number reorders.
 
 6. **Completion**: 
-    - Upon successfully completing 10 correct re-orders, a congratulatory message will appear and the progress bar will reset.
+    - Upon successfully completing 10 correct re-orders, a congratulatory message will appear, plus an achievement badge on the top corner and the progress bar will reset.
 
 ---
 
 ### Features
 
 - **Replacing Books**: Allows the user to practice organizing books by their call numbers.
-- **Progress Tracking**: Keeps track of the user's progress in organizing the books.
+- **Progress Tracking**: Keeps track of the user's progress in organizing the books and gives a badge for completing the progress bar.
 - **Drag-and-Drop Interface**: Provides an intuitive way to reorder books.
 
 ---
