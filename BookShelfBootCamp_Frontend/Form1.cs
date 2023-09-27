@@ -119,6 +119,7 @@ namespace PROG7132
                 bookImageList.Images.Add(Image.FromFile("Resources/book.jpg"));
                 bookImageList.Images.Add(Image.FromFile("Resources/book2.jpg"));
                 bookImageList.Images.Add(Image.FromFile("Resources/book3.jpg"));
+                bookImageList.Images.Add(Image.FromFile("Resources/book4.jpg"));
                 bookImageList.Images.Add(Image.FromFile("Resources/book5.jpg"));
             }
             catch (Exception ex)
