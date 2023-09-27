@@ -109,9 +109,9 @@
             // GeneratedListView
             // 
             this.GeneratedListView.HideSelection = false;
-            this.GeneratedListView.Location = new System.Drawing.Point(213, 0);
+            this.GeneratedListView.Location = new System.Drawing.Point(224, 0);
             this.GeneratedListView.Name = "GeneratedListView";
-            this.GeneratedListView.Size = new System.Drawing.Size(144, 676);
+            this.GeneratedListView.Size = new System.Drawing.Size(141, 676);
             this.GeneratedListView.TabIndex = 8;
             this.GeneratedListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(655, 747);
             this.Controls.Add(this.GeneratedListView);
             this.Controls.Add(this.lblProgressInfo);

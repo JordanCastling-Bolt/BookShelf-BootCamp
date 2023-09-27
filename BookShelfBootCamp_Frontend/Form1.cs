@@ -113,13 +113,26 @@ namespace PROG7132
             GeneratedListView.Items.Clear();
             bookImageList.Images.Clear(); // Also clear the image list
 
-            // Re-add your original book image
-            bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book.jpg"));
+            try
+            {
+                // Book images
+                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book.jpg"));
+                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book2.jpg"));
+                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book3.jpg"));
+                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book4.jpg"));
+                bookImageList.Images.Add(Image.FromFile("C:\\Users\\Jordan\\Documents\\GitHub\\BookShelf-BootCamp\\BookShelfBootCamp_Frontend\\Resources\\book5.jpg"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Random random = new Random(); // Initialize a random number generator
 
             foreach (string callNumber in callNumbers)
             {
-                // Create a new Bitmap from the original book image
-                Image image = new Bitmap(bookImageList.Images[0]);
+                int randomIndex = random.Next(0, 5); // Randomly choose between 0 and 1
+                Image image = new Bitmap(bookImageList.Images[randomIndex]); // Choose a random image
+
 
                 // Draw call number on the image
                 using (Graphics g = Graphics.FromImage(image))
@@ -128,7 +141,7 @@ namespace PROG7132
                     Brush textBrush = new SolidBrush(Color.AntiqueWhite);
 
                     // Choose a smaller font size to fit text in the image
-                    Font textFont = new Font("Arial", 10, FontStyle.Bold);  // Adjust the size as needed
+                    Font textFont = new Font("Arial", 8, FontStyle.Bold);  // Adjust the size as needed
 
                     // Calculate text position
                     SizeF textSize = g.MeasureString(callNumber, textFont);
@@ -136,12 +149,23 @@ namespace PROG7132
 
                     g.DrawString(callNumber, textFont, textBrush, position);
 
-                    // Create a border
+                    //Creating 3D tile effect
                     using (Pen borderPen = new Pen(Color.Black, 3))
                     {
                         g.DrawRectangle(borderPen, 0, 0, image.Width - 1, image.Height - 1);
                     }
+                    using (Pen lighterPen = new Pen(Color.LightGray, 2))
+                    {
+                        g.DrawLine(lighterPen, 1, 1, image.Width - 2, 1);
+                        g.DrawLine(lighterPen, 1, 1, 1, image.Height - 2);
+                    }
+                    using (Pen darkerPen = new Pen(Color.DarkGray, 2))
+                    {
+                        g.DrawLine(darkerPen, image.Width - 2, 1, image.Width - 2, image.Height - 2);
+                        g.DrawLine(darkerPen, 1, image.Height - 2, image.Width - 2, image.Height - 2);
+                    }
                 }
+
 
                 // Add this new image to your image list
                 bookImageList.Images.Add(image);
