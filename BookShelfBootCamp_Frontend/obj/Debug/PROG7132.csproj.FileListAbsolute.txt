@@ -97,7 +97,6 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\b
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\System.ValueTuple.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.csproj.AssemblyReference.cache
-C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.Form1.resources
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.IdentifyingAreas.resources
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.Properties.Resources.resources
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.ReplacingBooks.resources
@@ -106,3 +105,4 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\o
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.csproj.CopyComplete
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.exe
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.pdb
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.Form.resources

@@ -2,8 +2,15 @@
 {
     partial class Form1
     {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -15,74 +22,18 @@
 
         #region Windows Form Designer generated code
 
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.menuReplacingBooks = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuIdentifyingAreas = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFindingCallNumbers = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.menuStrip.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // menuReplacingBooks
-            // 
-            this.menuReplacingBooks.Name = "menuReplacingBooks";
-            this.menuReplacingBooks.Size = new System.Drawing.Size(127, 19);
-            this.menuReplacingBooks.Text = "Replacing Books";
-            this.menuReplacingBooks.Click += new System.EventHandler(this.menuReplacingBooks_Click);
-            // 
-            // menuIdentifyingAreas
-            // 
-            this.menuIdentifyingAreas.Name = "menuIdentifyingAreas";
-            this.menuIdentifyingAreas.Size = new System.Drawing.Size(127, 19);
-            this.menuIdentifyingAreas.Text = "Identifying Areas";
-            this.menuIdentifyingAreas.Click += new System.EventHandler(this.menuIdentifyingAreas_Click);
-            // 
-            // menuFindingCallNumbers
-            // 
-            this.menuFindingCallNumbers.Enabled = false;
-            this.menuFindingCallNumbers.Name = "menuFindingCallNumbers";
-            this.menuFindingCallNumbers.Size = new System.Drawing.Size(127, 19);
-            this.menuFindingCallNumbers.Text = "Finding Call Numbers";
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuReplacingBooks,
-            this.menuIdentifyingAreas,
-            this.menuFindingCallNumbers});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip.Size = new System.Drawing.Size(140, 819);
-            this.menuStrip.TabIndex = 0;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(906, 819);
-            this.Controls.Add(this.menuStrip);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bookshelf Bootcamp";
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Form1";
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripMenuItem menuReplacingBooks;
-        private System.Windows.Forms.ToolStripMenuItem menuIdentifyingAreas;
-        private System.Windows.Forms.ToolStripMenuItem menuFindingCallNumbers;
-        private System.Windows.Forms.MenuStrip menuStrip;
     }
 }
-
