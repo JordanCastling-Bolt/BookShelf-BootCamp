@@ -30,27 +30,10 @@ namespace PROG7132
         /// </summary>
         private void InitializeComponent()
         {
-            this.GeneratedListView = new System.Windows.Forms.ListView();
             this.btnGenerateCallNumbers = new System.Windows.Forms.Button();
+            this.CallNumbersListView = new System.Windows.Forms.ListView();
+            this.DescriptionsListView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // GeneratedListView
-            // 
-            this.GeneratedListView.HideSelection = false;
-            this.GeneratedListView.Location = new System.Drawing.Point(3, 3);
-            this.GeneratedListView.Name = "GeneratedListView";
-            this.GeneratedListView.Size = new System.Drawing.Size(300, 400);
-            this.GeneratedListView.UseCompatibleStateImageBehavior = false;
-            this.GeneratedListView.Columns.Add("Call Number", -2, HorizontalAlignment.Left);
-            this.GeneratedListView.Columns.Add("Description", -2, HorizontalAlignment.Left);
-            this.GeneratedListView.View = View.Details;
-            this.GeneratedListView.AllowDrop = true;  // Enabling drag and drop
-            this.GeneratedListView.ItemDrag += new ItemDragEventHandler(GeneratedListView_ItemDrag);
-            this.GeneratedListView.DragDrop += new DragEventHandler(GeneratedListView_DragDrop);
-            this.GeneratedListView.DragEnter += new DragEventHandler(GeneratedListView_DragEnter);
-
-            this.Controls.Add(this.GeneratedListView);
-            this.ResumeLayout(false);
             // 
             // btnGenerateCallNumbers
             // 
@@ -62,12 +45,35 @@ namespace PROG7132
             this.btnGenerateCallNumbers.UseVisualStyleBackColor = true;
             this.btnGenerateCallNumbers.Click += new System.EventHandler(this.btnGenerateCallNumbers_Click);
             // 
+            // CallNumbersListView
+            // 
+            this.CallNumbersListView.AllowDrop = true;
+            this.CallNumbersListView.HideSelection = false;
+            this.CallNumbersListView.Location = new System.Drawing.Point(3, 4);
+            this.CallNumbersListView.Name = "CallNumbersListView";
+            this.CallNumbersListView.Size = new System.Drawing.Size(122, 253);
+            this.CallNumbersListView.TabIndex = 2;
+            this.CallNumbersListView.UseCompatibleStateImageBehavior = false;
+            this.CallNumbersListView.View = System.Windows.Forms.View.List;
+            // 
+            // DescriptionsListView
+            // 
+            this.DescriptionsListView.AllowDrop = true;
+            this.DescriptionsListView.HideSelection = false;
+            this.DescriptionsListView.Location = new System.Drawing.Point(131, 4);
+            this.DescriptionsListView.Name = "DescriptionsListView";
+            this.DescriptionsListView.Size = new System.Drawing.Size(216, 253);
+            this.DescriptionsListView.TabIndex = 3;
+            this.DescriptionsListView.UseCompatibleStateImageBehavior = false;
+            this.DescriptionsListView.View = System.Windows.Forms.View.List;
+            // 
             // IdentifyingAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.DescriptionsListView);
+            this.Controls.Add(this.CallNumbersListView);
             this.Controls.Add(this.btnGenerateCallNumbers);
-            this.Controls.Add(this.GeneratedListView);
             this.Name = "IdentifyingAreas";
             this.Size = new System.Drawing.Size(359, 448);
             this.ResumeLayout(false);
@@ -77,5 +83,7 @@ namespace PROG7132
         #endregion
 
         private Button btnGenerateCallNumbers;
+        private ListView CallNumbersListView;
+        private ListView DescriptionsListView;
     }
 }

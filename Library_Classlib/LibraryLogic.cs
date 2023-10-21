@@ -13,13 +13,29 @@ namespace Library_Classlib
         public LibraryLogic()
         {
             CallNumberDescriptions = new Dictionary<string, string>
-            {
-                { "100", "Philosophy and psychology" },
-                { "200", "Religion" },
-                { "300", "Social sciences" },
-                // ... Add more Dewey Decimal System top-level categories
-            };
+    {
+        { "100", "Philosophy and psychology" },
+        { "200", "Religion" },
+        { "300", "Social sciences" },
+        { "000", "Computer science, general works, and information" },
+        { "400", "Language" },
+        { "500", "Natural sciences and mathematics" },
+        { "600", "Technology" },
+        { "700", "Arts and recreation" },
+        { "800", "Literature" },
+        { "900", "History and geography" },
+    };
         }
+
+        public bool IsCorrectMatch(string callNumber, string description)
+        {
+            if (CallNumberDescriptions.TryGetValue(callNumber, out string value))
+            {
+                return value == description;
+            }
+            return false;
+        }
+
 
         public KeyValuePair<string, string> GetRandomEntry()
         {
