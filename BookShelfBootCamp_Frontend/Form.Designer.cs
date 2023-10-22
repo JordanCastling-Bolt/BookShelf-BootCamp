@@ -17,7 +17,6 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.menuReplacingBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIdentifyingAreas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFindingCallNumbers = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +58,7 @@
             this.menuStrip.Size = new System.Drawing.Size(140, 819);
             this.menuStrip.TabIndex = 0;
             // 
-            // Form1
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,8 +66,7 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(906, 819);
             this.Controls.Add(this.menuStrip);
-            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bookshelf Bootcamp";
             this.menuStrip.ResumeLayout(false);

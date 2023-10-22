@@ -8,76 +8,57 @@ namespace PROG7132
 {
     public partial class IdentifyingAreas : UserControl
     {
-        private LibraryLogic libraryLogic = new LibraryLogic();
-        private bool isCallNumberToDescription = true;
-        private Dictionary<string, string> correctMatches = new Dictionary<string, string>();
+        private MTC_Logic libraryLogic = new MTC_Logic();
+        private readonly Dictionary<string, string> correctMatches = new Dictionary<string, string>();
+        private bool isCallNumberToDescription = true; // Step 1: Initialize the flag
 
         public IdentifyingAreas()
         {
             InitializeComponent();
             GenerateNewQuestion();
 
-            // Assuming the ListViews have been created, set up the drag-drop events for them
-            CallNumbersListView.ItemDrag += CallNumbersListView_ItemDrag;
-            CallNumbersListView.DragEnter += ListView_DragEnter;
-            CallNumbersListView.DragDrop += ListView_DragDrop;
-
-            DescriptionsListView.ItemDrag += DescriptionsListView_ItemDrag;
+            CallNumbersListView.ItemDrag += ListView_ItemDrag;
             DescriptionsListView.DragEnter += ListView_DragEnter;
             DescriptionsListView.DragDrop += ListView_DragDrop;
         }
 
-        private void CallNumbersListView_ItemDrag(object sender, ItemDragEventArgs e)
+        private void ListView_ItemDrag(object sender, ItemDragEventArgs e)
         {
-            CallNumbersListView.DoDragDrop(e.Item, DragDropEffects.Move);
-        }
-
-        private void DescriptionsListView_ItemDrag(object sender, ItemDragEventArgs e)
-        {
-            DescriptionsListView.DoDragDrop(e.Item, DragDropEffects.Move);
+            DoDragDrop(e.Item, DragDropEffects.Move);
         }
 
         private void ListView_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(typeof(ListViewItem)))
-                e.Effect = DragDropEffects.Move;
+            e.Effect = DragDropEffects.Move;
         }
 
         private void ListView_DragDrop(object sender, DragEventArgs e)
         {
-            ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
-            ListView sourceListView = draggedItem.ListView;
-            ListView targetListView = (ListView)sender;
+            Point pt = DescriptionsListView.PointToClient(new Point(e.X, e.Y));
+            ListViewItem destinationItem = DescriptionsListView.GetItemAt(pt.X, pt.Y);
 
-            Point point = targetListView.PointToClient(new Point(e.X, e.Y));
-            ListViewItem targetItem = targetListView.GetItemAt(point.X, point.Y);
-
-            // If dropped on another item in the target ListView
-            if (targetItem != null)
+            if (destinationItem != null && e.Data.GetDataPresent(typeof(ListViewItem)))
             {
-                int index = targetItem.Index;
-                targetListView.Items.Insert(index, (ListViewItem)draggedItem.Clone());
-            }
-            else // If dropped in an empty space in the target ListView
-            {
-                targetListView.Items.Add((ListViewItem)draggedItem.Clone());
-            }
+                ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
 
-            // Remove the item from the source ListView
-            sourceListView.Items.Remove(draggedItem);
+                bool isMatch;
+                if (isCallNumberToDescription)
+                {
+                    isMatch = libraryLogic.IsCorrectMatch(draggedItem.Text, destinationItem.Text);
+                }
+                else
+                {
+                    isMatch = libraryLogic.IsCorrectMatch(destinationItem.Text, draggedItem.Text);
+                }
 
-            // Check the match (this depends on your game logic)
-            if (libraryLogic.IsCorrectMatch(draggedItem.Text, targetItem?.Text))
-            {
-                correctMatches.Add(draggedItem.Text, targetItem?.Text);
-                // ... rest of your logic
+                if (isMatch)
+                {
+                    correctMatches.Add(draggedItem.Text, destinationItem.Text);
+                    CallNumbersListView.Items.Remove(draggedItem);
+                    DescriptionsListView.Items.Remove(destinationItem);
+                    CheckAllCorrectMatches();
+                }
             }
-            else
-            {
-                // ... rest of your logic
-            }
-
-            CheckAllCorrectMatches();
         }
 
 
@@ -87,29 +68,34 @@ namespace PROG7132
 
             CallNumbersListView.Items.Clear();
             DescriptionsListView.Items.Clear();
+            correctMatches.Clear();
 
+            // Adding call numbers to the left ListView
             foreach (var data in questionData.Item1)
             {
                 CallNumbersListView.Items.Add(new ListViewItem(data));
             }
 
+            // Adding descriptions to the right ListView
             foreach (var data in questionData.Item2)
             {
                 DescriptionsListView.Items.Add(new ListViewItem(data));
             }
 
-            // Toggle the question type for the next time
-            isCallNumberToDescription = !isCallNumberToDescription;
+            isCallNumberToDescription = !isCallNumberToDescription; // Step 2: Toggle the flag
         }
 
         private void CheckAllCorrectMatches()
         {
             // Check if all matches are correct
-            if (correctMatches.Count == CallNumbersListView.Items.Count)
+            if (correctMatches.Count == 4) // Assuming you start with 4 call numbers
             {
                 MessageBox.Show("Well Done!", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GenerateNewQuestion();
             }
         }
+
+
         private void btnGenerateCallNumbers_Click(object sender, EventArgs e)
         {
             GenerateNewQuestion();

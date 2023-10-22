@@ -171,7 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallNumberManager.cs" />
-    <Compile Include="LibraryLogic.cs" />
+    <Compile Include="MTC_Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

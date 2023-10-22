@@ -22,7 +22,6 @@ namespace PROG7132
             try
             {
                 InitializeComponent();
-                Debug.WriteLine("After Initialize");
 
                 callNumberControl.CorrectOrdering += OnCorrectOrdering;
 

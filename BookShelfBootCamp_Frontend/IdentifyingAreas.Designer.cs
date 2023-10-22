@@ -37,7 +37,7 @@ namespace PROG7132
             // 
             // btnGenerateCallNumbers
             // 
-            this.btnGenerateCallNumbers.Location = new System.Drawing.Point(3, 406);
+            this.btnGenerateCallNumbers.Location = new System.Drawing.Point(188, 403);
             this.btnGenerateCallNumbers.Name = "btnGenerateCallNumbers";
             this.btnGenerateCallNumbers.Size = new System.Drawing.Size(151, 23);
             this.btnGenerateCallNumbers.TabIndex = 1;
@@ -49,10 +49,10 @@ namespace PROG7132
             // 
             this.CallNumbersListView.AllowDrop = true;
             this.CallNumbersListView.HideSelection = false;
-            this.CallNumbersListView.Location = new System.Drawing.Point(3, 4);
+            this.CallNumbersListView.Location = new System.Drawing.Point(3, 121);
             this.CallNumbersListView.Name = "CallNumbersListView";
-            this.CallNumbersListView.Size = new System.Drawing.Size(122, 253);
-            this.CallNumbersListView.TabIndex = 2;
+            this.CallNumbersListView.Size = new System.Drawing.Size(265, 253);
+            this.CallNumbersListView.TabIndex = 3;
             this.CallNumbersListView.UseCompatibleStateImageBehavior = false;
             this.CallNumbersListView.View = System.Windows.Forms.View.List;
             // 
@@ -60,10 +60,10 @@ namespace PROG7132
             // 
             this.DescriptionsListView.AllowDrop = true;
             this.DescriptionsListView.HideSelection = false;
-            this.DescriptionsListView.Location = new System.Drawing.Point(131, 4);
+            this.DescriptionsListView.Location = new System.Drawing.Point(274, 121);
             this.DescriptionsListView.Name = "DescriptionsListView";
-            this.DescriptionsListView.Size = new System.Drawing.Size(216, 253);
-            this.DescriptionsListView.TabIndex = 3;
+            this.DescriptionsListView.Size = new System.Drawing.Size(280, 253);
+            this.DescriptionsListView.TabIndex = 4;
             this.DescriptionsListView.UseCompatibleStateImageBehavior = false;
             this.DescriptionsListView.View = System.Windows.Forms.View.List;
             // 
@@ -75,7 +75,7 @@ namespace PROG7132
             this.Controls.Add(this.CallNumbersListView);
             this.Controls.Add(this.btnGenerateCallNumbers);
             this.Name = "IdentifyingAreas";
-            this.Size = new System.Drawing.Size(359, 448);
+            this.Size = new System.Drawing.Size(763, 798);
             this.ResumeLayout(false);
 
         }
