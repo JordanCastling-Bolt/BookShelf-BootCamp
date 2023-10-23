@@ -27,84 +27,114 @@ namespace Library_Classlib
     };
         }
 
-        public bool IsCorrectMatch(string key, string value)
+        public bool IsCorrectMatch(string left, string right)
         {
-            // If it's a call number
-            if (CallNumberDescriptions.ContainsKey(key))
+            string baseKey;
+
+            // If left can be parsed as an integer (indicating that it is a call number)
+            if (int.TryParse(left, out int numericKey))
             {
-                return CallNumberDescriptions[key] == value;
+                baseKey = (numericKey / 100 * 100).ToString("D3");
+                return CallNumberDescriptions.ContainsKey(baseKey) && CallNumberDescriptions[baseKey] == right;
             }
-            // If it's a description
-            else if (CallNumberDescriptions.ContainsValue(key))
+
+            // If right can be parsed as an integer (indicating that it is a call number)
+            else if (int.TryParse(right, out int numericValue))
             {
-                return CallNumberDescriptions.FirstOrDefault(x => x.Value == key).Key == value;
+                var descriptionMatchKey = CallNumberDescriptions.FirstOrDefault(x => x.Value == left).Key;
+
+                // Check if the call number falls within the same range as the description
+                baseKey = (numericValue / 100 * 100).ToString("D3");
+                return descriptionMatchKey == baseKey;
             }
-            return false;
-        }
 
-
-
-        public KeyValuePair<string, string> GetRandomEntry()
-        {
-            return CallNumberDescriptions.ElementAt(rand.Next(0, CallNumberDescriptions.Count));
-        }
-
-        public void AddCallNumberAndDescription(string callNumber, string description)
-        {
-            if (!CallNumberDescriptions.ContainsKey(callNumber))
-            {
-                CallNumberDescriptions[callNumber] = description;
-            }
+            // Both left and right are descriptions (unlikely but possible)
             else
             {
-                throw new ArgumentException("Call number already exists in the library.");
+                return CallNumberDescriptions.ContainsValue(left) && CallNumberDescriptions.ContainsValue(right) && left == right;
             }
         }
 
         public Tuple<List<string>, List<string>> GenerateQuestion(bool isCallNumberToDescription)
         {
-            var allKeys = CallNumberDescriptions.Keys.ToList();
-            var allValues = CallNumberDescriptions.Values.ToList();
-
             var leftColumnItems = new List<string>();
             var rightColumnItems = new List<string>();
 
-            // If the flag is set to true, the left column will have call numbers, otherwise descriptions.
-            var poolForLeftColumn = isCallNumberToDescription ? allKeys : allValues;
+            var baseNumbers = Enumerable.Range(0, 10).Select(x => x * 100).ToList();
+            var poolForLeftColumn = new List<string>();
 
-            // Randomly select 4 unique items for the left column
-            while (leftColumnItems.Count < 4)
+            if (isCallNumberToDescription)
             {
-                var randomItem = poolForLeftColumn[rand.Next(poolForLeftColumn.Count)];
-                if (!leftColumnItems.Contains(randomItem))
+                // When call numbers are in the left column
+                foreach (var baseNumber in baseNumbers)
                 {
-                    leftColumnItems.Add(randomItem);
+                    var randomOffset = rand.Next(0, 100);
+                    var newNumber = baseNumber + randomOffset;
+                    var newNumberStr = newNumber.ToString("D3");
+                    poolForLeftColumn.Add(newNumberStr);
+                }
+
+                while (leftColumnItems.Count < 4)
+                {
+                    var randomItem = poolForLeftColumn[rand.Next(poolForLeftColumn.Count)];
+                    if (!leftColumnItems.Contains(randomItem))
+                    {
+                        leftColumnItems.Add(randomItem);
+                    }
+                }
+
+                foreach (var item in leftColumnItems)
+                {
+                    var baseNumberStr = (int.Parse(item) / 100 * 100).ToString("D3");
+                    rightColumnItems.Add(CallNumberDescriptions[baseNumberStr]);
+                }
+
+                while (rightColumnItems.Count < 7)
+                {
+                    var randomDescription = CallNumberDescriptions.Values.ElementAt(rand.Next(CallNumberDescriptions.Values.Count));
+                    if (!rightColumnItems.Contains(randomDescription))
+                    {
+                        rightColumnItems.Add(randomDescription);
+                    }
                 }
             }
-
-            // Add the corresponding items from the dictionary to the right column
-            foreach (var item in leftColumnItems)
+            else
             {
-                if (isCallNumberToDescription)
-                    rightColumnItems.Add(CallNumberDescriptions[item]);
-                else
-                    rightColumnItems.Add(CallNumberDescriptions.FirstOrDefault(x => x.Value == item).Key);
-            }
-
-            var remainingItemsForRightColumn = isCallNumberToDescription ? allValues.Except(rightColumnItems).ToList() : allKeys.Except(leftColumnItems).ToList();
-
-            // Add 3 random incorrect items to the right column from the remaining items
-            while (rightColumnItems.Count < 7)
-            {
-                var randomItem = remainingItemsForRightColumn[rand.Next(remainingItemsForRightColumn.Count)];
-                if (!rightColumnItems.Contains(randomItem))
+                // When descriptions are in the left column
+                while (leftColumnItems.Count < 4)
                 {
-                    rightColumnItems.Add(randomItem);
-                    remainingItemsForRightColumn.Remove(randomItem);
+                    var randomDescription = CallNumberDescriptions.Values.ElementAt(rand.Next(CallNumberDescriptions.Values.Count));
+                    if (!leftColumnItems.Contains(randomDescription))
+                    {
+                        leftColumnItems.Add(randomDescription);
+                    }
+                }
+
+                foreach (var description in leftColumnItems)
+                {
+                    var baseKey = CallNumberDescriptions.FirstOrDefault(x => x.Value == description).Key;
+                    var randomOffset = rand.Next(0, 100);
+                    var randomCallNumber = int.Parse(baseKey) + randomOffset;
+                    var randomCallNumberStr = randomCallNumber.ToString("D3");
+                    rightColumnItems.Add(randomCallNumberStr);  // Add a random call number within the base number's range
+                }
+
+                while (rightColumnItems.Count < 7)
+                {
+                    var randomBase = baseNumbers[rand.Next(baseNumbers.Count)];
+                    var randomOffset = rand.Next(0, 100);
+                    var randomCallNumber = randomBase + randomOffset;
+                    var randomCallNumberStr = randomCallNumber.ToString("D3");
+
+                    if (!rightColumnItems.Contains(randomCallNumberStr))
+                    {
+                        rightColumnItems.Add(randomCallNumberStr);
+                    }
                 }
             }
 
             return Tuple.Create(leftColumnItems, rightColumnItems.OrderBy(_ => rand.Next()).ToList());
         }
+
     }
 }

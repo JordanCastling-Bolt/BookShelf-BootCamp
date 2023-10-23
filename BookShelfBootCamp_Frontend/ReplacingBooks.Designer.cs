@@ -61,7 +61,7 @@
             this.replaceBooksBar.Location = new System.Drawing.Point(0, 775);
             this.replaceBooksBar.Maximum = 10;
             this.replaceBooksBar.Name = "replaceBooksBar";
-            this.replaceBooksBar.Size = new System.Drawing.Size(763, 23);
+            this.replaceBooksBar.Size = new System.Drawing.Size(1080, 23);
             this.replaceBooksBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.replaceBooksBar.TabIndex = 12;
             // 
@@ -109,7 +109,7 @@
             this.Controls.Add(this.btnGenerateCallNumbers);
             this.Controls.Add(this.btnCheckOrder);
             this.Name = "ReplacingBooks";
-            this.Size = new System.Drawing.Size(763, 798);
+            this.Size = new System.Drawing.Size(1080, 798);
             ((System.ComponentModel.ISupportInitialize)(this.achievementBadge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
