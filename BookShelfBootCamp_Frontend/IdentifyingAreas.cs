@@ -10,14 +10,15 @@ namespace PROG7132
     {
         private MTC_Logic libraryLogic = new MTC_Logic();
         private readonly Dictionary<string, string> correctMatches = new Dictionary<string, string>();
-        private bool isCallNumberToDescription = true; 
-
+        private bool isCallNumberToDescription = false;
+        private int streakCount = 0;
+        private ShuffleMode currentShuffleMode = ShuffleMode.None;
 
         public IdentifyingAreas()
         {
             InitializeComponent();
-            StyleListView(CallNumbersListView); 
-            StyleListView(DescriptionsListView); 
+            StyleListView(CallNumbersListView);
+            StyleListView(DescriptionsListView);
             GenerateNewQuestion();
 
             CallNumbersListView.ItemDrag += ListView_ItemDrag;
@@ -70,11 +71,12 @@ namespace PROG7132
         {
             var questionData = libraryLogic.GenerateQuestion(isCallNumberToDescription);
 
+            // Clear existing items
             CallNumbersListView.Items.Clear();
             DescriptionsListView.Items.Clear();
             correctMatches.Clear();
 
-            // Adding call numbers to the left ListView
+            // Populate call numbers
             foreach (var data in questionData.Item1)
             {
                 ListViewItem item = new ListViewItem(data)
@@ -85,7 +87,7 @@ namespace PROG7132
                 CallNumbersListView.Items.Add(item);
             }
 
-            // Adding descriptions to the right ListView
+            // Populate descriptions
             foreach (var data in questionData.Item2)
             {
                 ListViewItem item = new ListViewItem(data)
@@ -94,6 +96,21 @@ namespace PROG7132
                     Font = new Font("Arial", 14, FontStyle.Italic)
                 };
                 DescriptionsListView.Items.Add(item);
+            }
+
+            // Apply shuffling after populating both lists
+            switch (currentShuffleMode)
+            {
+                case ShuffleMode.Matches:
+                    ShuffleListViewItems(CallNumbersListView);
+                    break;
+                case ShuffleMode.Clues:
+                    ShuffleListViewItems(DescriptionsListView);
+                    break;
+                case ShuffleMode.Both:
+                    ShuffleListViewItems(CallNumbersListView);
+                    ShuffleListViewItems(DescriptionsListView);
+                    break;
             }
 
             if (isCallNumberToDescription)
@@ -108,7 +125,7 @@ namespace PROG7132
             }
             progressBar1.Value = 0;
 
-            isCallNumberToDescription = !isCallNumberToDescription; 
+            isCallNumberToDescription = !isCallNumberToDescription;
         }
 
 
@@ -136,10 +153,88 @@ namespace PROG7132
             if (correctMatches.Count == 4) // Assuming you start with 4 call numbers
             {
                 progressBar1.Value = 0;
+                streakCount++; // Increment the streak count
+
+                Image badgeImage = null;
+
+                // Check for streak badges
+                if (streakCount == 3)
+                {
+                    badgeImage = Properties.Resources._3streak;
+                }
+                else if (streakCount == 5)
+                {
+                    badgeImage = Properties.Resources._5streak;
+                }
+                else if (streakCount == 10)
+                {
+                    badgeImage = Properties.Resources._10streak;
+                }
+
+                if (badgeImage != null)
+                {
+                    badgePictureBox.SizeMode = PictureBoxSizeMode.Zoom; 
+                    badgePictureBox.Image = badgeImage;
+                    badgePictureBox.Visible = true;
+                }
+
                 MessageBox.Show("Well Done!", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GenerateNewQuestion();
             }
         }
 
+        enum ShuffleMode
+        {
+            None,
+            Matches,
+            Clues,
+            Both
+        }
+
+        private void ShuffleListViewItems(ListView listView)
+        {
+            var rand = new Random();
+            var items = new List<ListViewItem>();
+
+            // Copy existing items to a temporary list
+            foreach (ListViewItem item in listView.Items)
+            {
+                items.Add((ListViewItem)item.Clone());
+            }
+
+            listView.Items.Clear();
+
+            // Shuffle the temporary list
+            int n = items.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rand.Next(n + 1);
+                var value = items[k];
+                items[k] = items[n];
+                items[n] = value;
+            }
+
+            // Populate the ListView with shuffled items
+            listView.Items.AddRange(items.ToArray());
+        }
+
+        // Your button click handlers would now simply call ShuffleListViewItems
+
+        private void btnShuffleMatches_Click(object sender, EventArgs e)
+        {
+            ShuffleListViewItems(CallNumbersListView);
+        }
+
+        private void btnShuffleClues_Click(object sender, EventArgs e)
+        {
+            ShuffleListViewItems(DescriptionsListView);
+        }
+
+        private void btnShuffleBoth_Click(object sender, EventArgs e)
+        {
+            ShuffleListViewItems(CallNumbersListView);
+            ShuffleListViewItems(DescriptionsListView);
+        }
     }
 }

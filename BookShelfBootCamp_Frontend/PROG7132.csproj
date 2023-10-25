@@ -245,6 +245,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\3streak.png" />
+    <None Include="Resources\5streak.png" />
+    <None Include="Resources\10streak.png" />
     <Content Include="Resources\badge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

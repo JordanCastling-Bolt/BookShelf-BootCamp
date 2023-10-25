@@ -47,6 +47,8 @@ namespace PROG7132
 
             callNumberManager.OnProgressUpdate += UpdateProgressLabel;
             this.Controls.Add(this.lblProgressInfo);
+            var callNumbers = callNumberManager.GenerateCallNumbers();
+            DisplayCallNumbers(callNumbers);
         }
 
         /// <summary>

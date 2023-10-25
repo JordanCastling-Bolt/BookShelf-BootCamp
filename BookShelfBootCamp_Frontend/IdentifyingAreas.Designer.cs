@@ -33,6 +33,12 @@ namespace PROG7132
             this.CallNumbersListView = new System.Windows.Forms.ListView();
             this.DescriptionsListView = new System.Windows.Forms.ListView();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.badgePictureBox = new System.Windows.Forms.PictureBox();
+            this.btnShuffleMatches = new System.Windows.Forms.Button();
+            this.btnShuffleClues = new System.Windows.Forms.Button();
+            this.btnShuffleBoth = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.badgePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // CallNumbersListView
@@ -59,23 +65,79 @@ namespace PROG7132
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(4, 774);
+            this.progressBar1.Location = new System.Drawing.Point(0, 800);
             this.progressBar1.Maximum = 4;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1073, 23);
+            this.progressBar1.Size = new System.Drawing.Size(1080, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 5;
+            // 
+            // badgePictureBox
+            // 
+            this.badgePictureBox.Location = new System.Drawing.Point(416, 380);
+            this.badgePictureBox.Name = "badgePictureBox";
+            this.badgePictureBox.Size = new System.Drawing.Size(250, 206);
+            this.badgePictureBox.TabIndex = 6;
+            this.badgePictureBox.TabStop = false;
+            // 
+            // btnShuffleMatches
+            // 
+            this.btnShuffleMatches.Location = new System.Drawing.Point(4, 381);
+            this.btnShuffleMatches.Name = "btnShuffleMatches";
+            this.btnShuffleMatches.Size = new System.Drawing.Size(114, 23);
+            this.btnShuffleMatches.TabIndex = 7;
+            this.btnShuffleMatches.Text = "Shuffle Matches";
+            this.btnShuffleMatches.UseVisualStyleBackColor = true;
+            this.btnShuffleMatches.Click += new System.EventHandler(this.btnShuffleMatches_Click);
+            // 
+            // btnShuffleClues
+            // 
+            this.btnShuffleClues.Location = new System.Drawing.Point(4, 411);
+            this.btnShuffleClues.Name = "btnShuffleClues";
+            this.btnShuffleClues.Size = new System.Drawing.Size(114, 23);
+            this.btnShuffleClues.TabIndex = 8;
+            this.btnShuffleClues.Text = "Shuffle Clues";
+            this.btnShuffleClues.UseVisualStyleBackColor = true;
+            this.btnShuffleClues.Click += new System.EventHandler(this.btnShuffleClues_Click);
+            // 
+            // btnShuffleBoth
+            // 
+            this.btnShuffleBoth.Location = new System.Drawing.Point(4, 441);
+            this.btnShuffleBoth.Name = "btnShuffleBoth";
+            this.btnShuffleBoth.Size = new System.Drawing.Size(114, 23);
+            this.btnShuffleBoth.TabIndex = 9;
+            this.btnShuffleBoth.Text = "Shuffle Both";
+            this.btnShuffleBoth.UseVisualStyleBackColor = true;
+            this.btnShuffleBoth.Click += new System.EventHandler(this.btnShuffleBoth_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(39, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(348, 37);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Matching the Columns";
             // 
             // IdentifyingAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnShuffleBoth);
+            this.Controls.Add(this.btnShuffleClues);
+            this.Controls.Add(this.btnShuffleMatches);
+            this.Controls.Add(this.badgePictureBox);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.DescriptionsListView);
             this.Controls.Add(this.CallNumbersListView);
             this.Name = "IdentifyingAreas";
-            this.Size = new System.Drawing.Size(1080, 798);
+            this.Size = new System.Drawing.Size(1080, 823);
+            ((System.ComponentModel.ISupportInitialize)(this.badgePictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,5 +146,10 @@ namespace PROG7132
         private ListView CallNumbersListView;
         private ListView DescriptionsListView;
         private ProgressBar progressBar1;
+        private PictureBox badgePictureBox;
+        private Button btnShuffleMatches;
+        private Button btnShuffleClues;
+        private Button btnShuffleBoth;
+        private Label label1;
     }
 }
