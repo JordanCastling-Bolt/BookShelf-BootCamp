@@ -10,14 +10,14 @@ namespace PROG7132
     {
         private MTC_Logic libraryLogic = new MTC_Logic();
         private readonly Dictionary<string, string> correctMatches = new Dictionary<string, string>();
-        private bool isCallNumberToDescription = true; // Step 1: Initialize the flag
+        private bool isCallNumberToDescription = true; 
 
 
         public IdentifyingAreas()
         {
             InitializeComponent();
-            StyleListView(CallNumbersListView); // Apply styles to CallNumbersListView
-            StyleListView(DescriptionsListView); // Apply styles to DescriptionsListView
+            StyleListView(CallNumbersListView); 
+            StyleListView(DescriptionsListView); 
             GenerateNewQuestion();
 
             CallNumbersListView.ItemDrag += ListView_ItemDrag;
@@ -108,7 +108,7 @@ namespace PROG7132
             }
             progressBar1.Value = 0;
 
-            isCallNumberToDescription = !isCallNumberToDescription; // Step 2: Toggle the flag
+            isCallNumberToDescription = !isCallNumberToDescription; 
         }
 
 

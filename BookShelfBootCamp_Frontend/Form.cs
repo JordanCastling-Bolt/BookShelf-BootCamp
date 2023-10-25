@@ -16,7 +16,6 @@ namespace PROG7132
         private int currentCorrectOrders = 0;
         IdentifyingAreas identifyingAreas = new IdentifyingAreas();
 
-
         public Form()
         {
             try

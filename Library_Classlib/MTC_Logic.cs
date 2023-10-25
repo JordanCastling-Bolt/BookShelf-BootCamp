@@ -110,31 +110,40 @@ namespace Library_Classlib
                     }
                 }
 
+                // Add 4 corresponding call numbers
                 foreach (var description in leftColumnItems)
                 {
                     var baseKey = CallNumberDescriptions.FirstOrDefault(x => x.Value == description).Key;
                     var randomOffset = rand.Next(0, 100);
                     var randomCallNumber = int.Parse(baseKey) + randomOffset;
                     var randomCallNumberStr = randomCallNumber.ToString("D3");
-                    rightColumnItems.Add(randomCallNumberStr);  // Add a random call number within the base number's range
+                    rightColumnItems.Add(randomCallNumberStr);
                 }
 
-                while (rightColumnItems.Count < 7)
+                // Add 3 incorrect call numbers
+                var incorrectCount = 0;
+                while (incorrectCount < 3)
                 {
                     var randomBase = baseNumbers[rand.Next(baseNumbers.Count)];
                     var randomOffset = rand.Next(0, 100);
                     var randomCallNumber = randomBase + randomOffset;
                     var randomCallNumberStr = randomCallNumber.ToString("D3");
 
-                    if (!rightColumnItems.Contains(randomCallNumberStr))
+                    // Check if this number does not have a corresponding description in leftColumnItems
+                    var baseKeyForRandom = (randomCallNumber / 100 * 100).ToString("D3");
+                    var descriptionForRandom = CallNumberDescriptions[baseKeyForRandom];
+                    if (!leftColumnItems.Contains(descriptionForRandom))
                     {
-                        rightColumnItems.Add(randomCallNumberStr);
+                        if (!rightColumnItems.Contains(randomCallNumberStr))
+                        {
+                            rightColumnItems.Add(randomCallNumberStr);
+                            incorrectCount++;
+                        }
                     }
                 }
             }
 
             return Tuple.Create(leftColumnItems, rightColumnItems.OrderBy(_ => rand.Next()).ToList());
         }
-
     }
 }
