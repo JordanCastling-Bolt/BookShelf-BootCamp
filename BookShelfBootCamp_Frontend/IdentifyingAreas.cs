@@ -24,6 +24,9 @@ namespace PROG7132
             CallNumbersListView.ItemDrag += ListView_ItemDrag;
             DescriptionsListView.DragEnter += ListView_DragEnter;
             DescriptionsListView.DragDrop += ListView_DragDrop;
+
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(btnHint, "Click for game instructions.");
         }
 
         private void ListView_ItemDrag(object sender, ItemDragEventArgs e)
@@ -235,6 +238,22 @@ namespace PROG7132
         {
             ShuffleListViewItems(CallNumbersListView);
             ShuffleListViewItems(DescriptionsListView);
+        }
+
+        private void btnHint_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+               "How to Play:\n" +
+               "1. Drag items from the left (Clues) to the right (Matches) to match them.\n" +
+               "2. A successful match will remove both items from the lists.\n" +
+               "3. Match all items correctly to complete the round.\n" +
+               "4. New rounds will swap Categories and Call Numbers and vice versa. \n" +
+               "5. Complete 10 rounds to earn all the badges.\n" +
+               " Enjoy ",
+               "Game Instructions",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Information
+           );
         }
     }
 }

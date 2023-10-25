@@ -38,6 +38,7 @@ namespace PROG7132
             this.btnShuffleClues = new System.Windows.Forms.Button();
             this.btnShuffleBoth = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.badgePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,17 +87,17 @@ namespace PROG7132
             this.btnShuffleMatches.Name = "btnShuffleMatches";
             this.btnShuffleMatches.Size = new System.Drawing.Size(114, 23);
             this.btnShuffleMatches.TabIndex = 7;
-            this.btnShuffleMatches.Text = "Shuffle Matches";
+            this.btnShuffleMatches.Text = "Shuffle Clues";
             this.btnShuffleMatches.UseVisualStyleBackColor = true;
             this.btnShuffleMatches.Click += new System.EventHandler(this.btnShuffleMatches_Click);
             // 
             // btnShuffleClues
             // 
-            this.btnShuffleClues.Location = new System.Drawing.Point(4, 411);
+            this.btnShuffleClues.Location = new System.Drawing.Point(4, 410);
             this.btnShuffleClues.Name = "btnShuffleClues";
             this.btnShuffleClues.Size = new System.Drawing.Size(114, 23);
             this.btnShuffleClues.TabIndex = 8;
-            this.btnShuffleClues.Text = "Shuffle Clues";
+            this.btnShuffleClues.Text = "Shuffle Matches";
             this.btnShuffleClues.UseVisualStyleBackColor = true;
             this.btnShuffleClues.Click += new System.EventHandler(this.btnShuffleClues_Click);
             // 
@@ -121,10 +122,21 @@ namespace PROG7132
             this.label1.TabIndex = 10;
             this.label1.Text = "Matching the Columns";
             // 
+            // btnHint
+            // 
+            this.btnHint.Location = new System.Drawing.Point(416, 47);
+            this.btnHint.Name = "btnHint";
+            this.btnHint.Size = new System.Drawing.Size(75, 23);
+            this.btnHint.TabIndex = 11;
+            this.btnHint.Text = "Hint";
+            this.btnHint.UseVisualStyleBackColor = true;
+            this.btnHint.Click += new System.EventHandler(this.btnHint_Click);
+            // 
             // IdentifyingAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnHint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnShuffleBoth);
             this.Controls.Add(this.btnShuffleClues);
@@ -151,5 +163,6 @@ namespace PROG7132
         private Button btnShuffleClues;
         private Button btnShuffleBoth;
         private Label label1;
+        private Button btnHint;
     }
 }
