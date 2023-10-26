@@ -4,57 +4,72 @@ using System.Linq;
 
 namespace Library_Classlib
 {
+    /// <summary>
+    /// Provides logic for the Match-The-Category game.
+    /// </summary>
     public class MTC_Logic
     {
+        // Dictionary to hold the mappings between call numbers and their descriptions.
         public Dictionary<string, string> CallNumberDescriptions { get; private set; }
 
+        // Random number generator.
         private readonly Random rand = new Random();
 
+        /// <summary>
+        /// Initializes a new instance of the MTC_Logic class.
+        /// </summary>
         public MTC_Logic()
         {
             CallNumberDescriptions = new Dictionary<string, string>
-    {
-        { "000", "Computer science, general works, and information" },
-        { "100", "Philosophy and psychology" },
-        { "200", "Religion" },
-        { "300", "Social sciences" },
-        { "400", "Language" },
-        { "500", "Natural sciences and mathematics" },
-        { "600", "Technology" },
-        { "700", "Arts and recreation" },
-        { "800", "Literature" },
-        { "900", "History and geography" },
-    };
+            {
+                { "000", "Computer science, general works, and information" },
+                { "100", "Philosophy and psychology" },
+                { "200", "Religion" },
+                { "300", "Social sciences" },
+                { "400", "Language" },
+                { "500", "Natural sciences and mathematics" },
+                { "600", "Technology" },
+                { "700", "Arts and recreation" },
+                { "800", "Literature" },
+                { "900", "History and geography" },
+            };
         }
 
+        /// <summary>
+        /// Checks if the provided pair of call number and description is a correct match.
+        /// </summary>
+        /// <param name="left">The left item (either a call number or a description).</param>
+        /// <param name="right">The right item (either a call number or a description).</param>
+        /// <returns>True if they match correctly; otherwise, false.</returns>
         public bool IsCorrectMatch(string left, string right)
         {
             string baseKey;
 
-            // If left can be parsed as an integer (indicating that it is a call number)
+            // Check if the left item is a call number.
             if (int.TryParse(left, out int numericKey))
             {
                 baseKey = (numericKey / 100 * 100).ToString("D3");
                 return CallNumberDescriptions.ContainsKey(baseKey) && CallNumberDescriptions[baseKey] == right;
             }
-
-            // If right can be parsed as an integer (indicating that it is a call number)
+            // Check if the right item is a call number.
             else if (int.TryParse(right, out int numericValue))
             {
                 var descriptionMatchKey = CallNumberDescriptions.FirstOrDefault(x => x.Value == left).Key;
-
-                // Check if the call number falls within the same range as the description
                 baseKey = (numericValue / 100 * 100).ToString("D3");
                 return descriptionMatchKey == baseKey;
             }
-
-            // Both left and right are descriptions (unlikely but possible)
+            // Both left and right are descriptions.
             else
             {
                 return CallNumberDescriptions.ContainsValue(left) && CallNumberDescriptions.ContainsValue(right) && left == right;
             }
         }
 
+        /// <summary>
+        /// Generates a set of call numbers and descriptions for a round of the game.
+        /// </summary>
+        /// <param name="isCallNumberToDescription">Indicates if the left column should contain call numbers.</param>
+        /// <returns>A tuple where the first item is the list for the left column and the second item is the list for the right column.</returns>
         public Tuple<List<string>, List<string>> GenerateQuestion(bool isCallNumberToDescription)
         {
             var leftColumnItems = new List<string>();
@@ -65,7 +80,7 @@ namespace Library_Classlib
 
             if (isCallNumberToDescription)
             {
-                // When call numbers are in the left column
+                // Populate the left column with call numbers.
                 foreach (var baseNumber in baseNumbers)
                 {
                     var randomOffset = rand.Next(0, 100);
@@ -89,6 +104,7 @@ namespace Library_Classlib
                     rightColumnItems.Add(CallNumberDescriptions[baseNumberStr]);
                 }
 
+                // Add three more random descriptions for variety.
                 while (rightColumnItems.Count < 7)
                 {
                     var randomDescription = CallNumberDescriptions.Values.ElementAt(rand.Next(CallNumberDescriptions.Values.Count));
@@ -100,7 +116,7 @@ namespace Library_Classlib
             }
             else
             {
-                // When descriptions are in the left column
+                // When descriptions are in the left column.
                 while (leftColumnItems.Count < 4)
                 {
                     var randomDescription = CallNumberDescriptions.Values.ElementAt(rand.Next(CallNumberDescriptions.Values.Count));
@@ -110,7 +126,6 @@ namespace Library_Classlib
                     }
                 }
 
-                // Add 4 corresponding call numbers
                 foreach (var description in leftColumnItems)
                 {
                     var baseKey = CallNumberDescriptions.FirstOrDefault(x => x.Value == description).Key;
@@ -120,7 +135,7 @@ namespace Library_Classlib
                     rightColumnItems.Add(randomCallNumberStr);
                 }
 
-                // Add 3 incorrect call numbers
+                // Add three incorrect call numbers for variety.
                 var incorrectCount = 0;
                 while (incorrectCount < 3)
                 {
@@ -129,7 +144,6 @@ namespace Library_Classlib
                     var randomCallNumber = randomBase + randomOffset;
                     var randomCallNumberStr = randomCallNumber.ToString("D3");
 
-                    // Check if this number does not have a corresponding description in leftColumnItems
                     var baseKeyForRandom = (randomCallNumber / 100 * 100).ToString("D3");
                     var descriptionForRandom = CallNumberDescriptions[baseKeyForRandom];
                     if (!leftColumnItems.Contains(descriptionForRandom))
@@ -143,6 +157,7 @@ namespace Library_Classlib
                 }
             }
 
+            // Return shuffled right column items.
             return Tuple.Create(leftColumnItems, rightColumnItems.OrderBy(_ => rand.Next()).ToList());
         }
     }

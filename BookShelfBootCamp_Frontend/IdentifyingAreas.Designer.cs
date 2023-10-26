@@ -30,6 +30,7 @@ namespace PROG7132
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CallNumbersListView = new System.Windows.Forms.ListView();
             this.DescriptionsListView = new System.Windows.Forms.ListView();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -39,6 +40,7 @@ namespace PROG7132
             this.btnShuffleBoth = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHint = new System.Windows.Forms.Button();
+            this.colorResetTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.badgePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,6 +134,10 @@ namespace PROG7132
             this.btnHint.UseVisualStyleBackColor = true;
             this.btnHint.Click += new System.EventHandler(this.btnHint_Click);
             // 
+            // colorResetTimer
+            // 
+            this.colorResetTimer.Interval = 1500;
+            // 
             // IdentifyingAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,5 +170,6 @@ namespace PROG7132
         private Button btnShuffleBoth;
         private Label label1;
         private Button btnHint;
+        private Timer colorResetTimer;
     }
 }
