@@ -68,6 +68,7 @@ namespace PROG7132
             // 
             // progressBar1
             // 
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.progressBar1.Location = new System.Drawing.Point(0, 800);
             this.progressBar1.Maximum = 4;
             this.progressBar1.Name = "progressBar1";

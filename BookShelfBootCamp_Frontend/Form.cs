@@ -10,11 +10,9 @@ namespace PROG7132
     /// </summary>
     public partial class Form : System.Windows.Forms.Form
     {
-        ReplacingBooks callNumberControl = new ReplacingBooks();
         public event EventHandler CorrectOrdering;
         private CallNumberManager callNumberManager = new CallNumberManager();
         private int currentCorrectOrders = 0;
-        IdentifyingAreas identifyingAreas = new IdentifyingAreas();
 
         public Form()
         {
@@ -22,16 +20,8 @@ namespace PROG7132
             {
                 InitializeComponent();
 
-                callNumberControl.CorrectOrdering += OnCorrectOrdering;
+                replacingBooks1.CorrectOrdering += OnCorrectOrdering;
 
-                this.Controls.Add(callNumberControl);
-                callNumberControl.Dock = DockStyle.Right;
-                callNumberControl.Visible = true;
-
-
-                this.Controls.Add(identifyingAreas);
-                identifyingAreas.Dock = DockStyle.Right;
-                identifyingAreas.Visible = false;
 
             } catch(Exception e) { MessageBox.Show(e.ToString()); }
         }
@@ -39,19 +29,19 @@ namespace PROG7132
         {
             currentCorrectOrders++;
             var newCallNumbers = callNumberManager.GenerateCallNumbers();
-            callNumberControl.DisplayCallNumbers(newCallNumbers);
+            replacingBooks1.DisplayCallNumbers(newCallNumbers);
         }
 
         private void menuIdentifyingAreas_Click(object sender, EventArgs e)
         {
-            callNumberControl.Visible = false;
-            identifyingAreas.Visible = true;
+            replacingBooks1.Visible = false;
+            identifyingAreas1.Visible = true;
         }
 
         private void menuReplacingBooks_Click(object sender, EventArgs e)
         {
-            callNumberControl.Visible = true;
-            identifyingAreas.Visible = false;
+            replacingBooks1.Visible = true;
+            identifyingAreas1.Visible = false;
         }
     }
 }
