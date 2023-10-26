@@ -17,6 +17,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.menuReplacingBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIdentifyingAreas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFindingCallNumbers = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +67,7 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1218, 819);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bookshelf Bootcamp";
