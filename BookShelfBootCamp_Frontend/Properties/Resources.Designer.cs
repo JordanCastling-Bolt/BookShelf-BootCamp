@@ -99,5 +99,15 @@ namespace PROG7132.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DeweyClassificationComplete {
+            get {
+                object obj = ResourceManager.GetObject("DeweyClassificationComplete", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

@@ -78,6 +78,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\BookShelfBootCamp_Frontend\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\BookShelfBootCamp_Frontend\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
       <HintPath>..\BookShelfBootCamp_Frontend\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
     </Reference>
@@ -171,6 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallNumberManager.cs" />
+    <Compile Include="FindingCallNumbers\QuizManager.cs" />
+    <Compile Include="FindingCallNumbers\DeweyDecimalTree.cs" />
+    <Compile Include="FindingCallNumbers\TreeNode.cs" />
     <Compile Include="MTC_Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

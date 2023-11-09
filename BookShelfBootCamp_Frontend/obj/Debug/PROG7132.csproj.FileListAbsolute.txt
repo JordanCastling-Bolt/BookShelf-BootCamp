@@ -51,6 +51,7 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\b
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Microsoft.Extensions.Primitives.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\NPOI.Core.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\NPOI.OOXML.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\NPOI.OpenXml4Net.dll
@@ -97,6 +98,7 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\b
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Microsoft.Extensions.Primitives.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\NPOI.Core.pdb
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\NPOI.Core.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\NPOI.OOXML.pdb
@@ -123,6 +125,7 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\b
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\bin\Debug\System.ValueTuple.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.csproj.AssemblyReference.cache
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.FindingCallNumbers.resources
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.Form.resources
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.IdentifyingAreas.resources
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\BookShelfBootCamp_Frontend\obj\Debug\PROG7132.Properties.Resources.resources

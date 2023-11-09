@@ -32,6 +32,7 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\M
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\SixLabors.Fonts.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\SixLabors.ImageSharp.dll
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\SixLabors.ImageSharp.Drawing.dll
@@ -64,6 +65,7 @@ C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\M
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\SixLabors.Fonts.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\SixLabors.ImageSharp.xml
 C:\Users\Jordan\Documents\GitHub\BookShelf-BootCamp\Library_Classlib\bin\Debug\SixLabors.ImageSharp.Drawing.xml
