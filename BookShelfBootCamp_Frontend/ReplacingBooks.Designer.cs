@@ -34,13 +34,14 @@
             this.btnGenerateCallNumbers = new System.Windows.Forms.Button();
             this.btnCheckOrder = new System.Windows.Forms.Button();
             this.achievementBadge = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.achievementBadge)).BeginInit();
             this.SuspendLayout();
             // 
             // GeneratedListView
             // 
             this.GeneratedListView.HideSelection = false;
-            this.GeneratedListView.Location = new System.Drawing.Point(3, 3);
+            this.GeneratedListView.Location = new System.Drawing.Point(339, 3);
             this.GeneratedListView.Name = "GeneratedListView";
             this.GeneratedListView.Size = new System.Drawing.Size(142, 676);
             this.GeneratedListView.TabIndex = 14;
@@ -91,17 +92,29 @@
             // 
             // achievementBadge
             // 
-            this.achievementBadge.Location = new System.Drawing.Point(151, 3);
+            this.achievementBadge.Location = new System.Drawing.Point(487, 3);
             this.achievementBadge.Name = "achievementBadge";
             this.achievementBadge.Size = new System.Drawing.Size(196, 154);
             this.achievementBadge.TabIndex = 15;
             this.achievementBadge.TabStop = false;
             this.achievementBadge.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(262, 37);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Replacing Books";
+            // 
             // ReplacingBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.achievementBadge);
             this.Controls.Add(this.GeneratedListView);
             this.Controls.Add(this.lblProgressInfo);
@@ -124,5 +137,6 @@
         private System.Windows.Forms.ProgressBar replaceBooksBar;
         private System.Windows.Forms.Button btnGenerateCallNumbers;
         private System.Windows.Forms.Button btnCheckOrder;
+        private System.Windows.Forms.Label label1;
     }
 }

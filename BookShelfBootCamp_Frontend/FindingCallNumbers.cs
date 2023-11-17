@@ -16,11 +16,19 @@ namespace PROG7132
     {
         private QuizManager quizManager;
         private List<string> currentOptions; // This should be List<string> now
+        private int lives;
+
+        private PictureBox life1;
+        private PictureBox life2;
+        private PictureBox life3;
 
         public FindingCallNumbers()
         {
             InitializeComponent();
             InitializeQuiz();
+
+            lives = 3;
+            InitializeLivesUI();
 
             optionButton1.Click += optionButton_Click;
             optionButton2.Click += optionButton_Click;
@@ -47,6 +55,37 @@ namespace PROG7132
             {
                 MessageBox.Show($"Error initializing quiz: {ex.Message}");
             }
+        }
+
+        private void InitializeLivesUI()
+        {
+            // Set the Image property of PictureBoxes to the life icon from resources
+            Image lifeIcon = Properties.Resources.Life; 
+
+            // Assuming life1, life2, and life3 are the names of your PictureBox controls
+            pictureBox1.Image = lifeIcon;
+            pictureBox2.Image = lifeIcon;
+            pictureBox3.Image = lifeIcon;
+
+            // You can also set other properties like SizeMode if needed
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            pictureBox1.BackColor = Color.Transparent; 
+            pictureBox2.BackColor = Color.Transparent; 
+            pictureBox3.BackColor = Color.Transparent;
+
+            UpdateLivesDisplay();
+        }
+
+
+        private void UpdateLivesDisplay()
+        {
+            // Update the visibility of life icons based on the number of lives
+            pictureBox1.Visible = lives >= 1;
+            pictureBox2.Visible = lives >= 2;
+            pictureBox3.Visible = lives >= 3;
         }
 
         private void LoadNewQuestion()
@@ -90,6 +129,8 @@ namespace PROG7132
                     }
                     else // The quiz is finished with the current question
                     {
+                        lives = 3; // Reset lives
+                        UpdateLivesDisplay();
                         // The user has answered all steps correctly, load a new question
                         LoadNewQuestion();
                     }
@@ -98,6 +139,14 @@ namespace PROG7132
                 {
                     MessageBox.Show("Incorrect answer. Try again.");
                     // The answer was incorrect, you might want to reload the same options or provide feedback
+                    lives--; // Decrease life
+                    UpdateLivesDisplay();
+
+                    if (lives <= 0)
+                    {
+                        MessageBox.Show("You've run out of lives!");
+                        ResetGame();
+                    }
                 }
             }
         }
@@ -109,6 +158,14 @@ namespace PROG7132
             optionButton2.Text = options.Count > 1 ? options[1] : string.Empty;
             optionButton3.Text = options.Count > 2 ? options[2] : string.Empty;
             optionButton4.Text = options.Count > 3 ? options[3] : string.Empty;
+        }
+
+        private void ResetGame()
+        {
+            lives = 3; // Reset lives
+            UpdateLivesDisplay();
+            InitializeQuiz(); // Reset the quiz to the beginning
+                              
         }
 
     }

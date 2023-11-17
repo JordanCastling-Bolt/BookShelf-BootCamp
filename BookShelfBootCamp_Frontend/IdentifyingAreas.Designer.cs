@@ -41,6 +41,8 @@ namespace PROG7132
             this.label1 = new System.Windows.Forms.Label();
             this.btnHint = new System.Windows.Forms.Button();
             this.colorResetTimer = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.badgePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +121,7 @@ namespace PROG7132
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 34);
+            this.label1.Location = new System.Drawing.Point(6, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(348, 37);
             this.label1.TabIndex = 10;
@@ -139,10 +141,32 @@ namespace PROG7132
             // 
             this.colorResetTimer.Interval = 1500;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Clues";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(541, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 18);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Matches";
+            // 
             // IdentifyingAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnShuffleBoth);
@@ -172,5 +196,7 @@ namespace PROG7132
         private Label label1;
         private Button btnHint;
         private Timer colorResetTimer;
+        private Label label2;
+        private Label label3;
     }
 }

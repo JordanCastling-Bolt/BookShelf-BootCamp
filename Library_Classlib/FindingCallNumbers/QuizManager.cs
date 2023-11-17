@@ -158,7 +158,6 @@ namespace Library_Classlib.FindingCallNumbers
             }
             else if (quizStep == 2)
             {
-                // ... existing code for the second step ...
                 return GetDivisionOptions();
             }
             else if (quizStep == 3)
@@ -207,7 +206,6 @@ namespace Library_Classlib.FindingCallNumbers
 
             return dummy;
         }
-
 
         public bool IsQuizAtSecondStep()
         {

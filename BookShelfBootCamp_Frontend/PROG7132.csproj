@@ -290,6 +290,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Life.png" />
     <None Include="Resources\3streak.png" />
     <None Include="Resources\5streak.png" />
     <None Include="Resources\10streak.png" />
