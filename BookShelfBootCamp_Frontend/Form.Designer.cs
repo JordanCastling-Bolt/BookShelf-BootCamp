@@ -64,6 +64,7 @@
             // 
             // findingCallNumbers1
             // 
+            this.findingCallNumbers1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.findingCallNumbers1.Location = new System.Drawing.Point(140, 0);
             this.findingCallNumbers1.Name = "findingCallNumbers1";
             this.findingCallNumbers1.Size = new System.Drawing.Size(1078, 819);
