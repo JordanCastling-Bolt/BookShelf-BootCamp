@@ -22,9 +22,9 @@
             this.menuIdentifyingAreas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFindingCallNumbers = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.findingCallNumbers1 = new PROG7132.FindingCallNumbers();
             this.identifyingAreas1 = new PROG7132.IdentifyingAreas();
             this.replacingBooks1 = new PROG7132.ReplacingBooks();
+            this.findingCallNumbers2 = new PROG7132.FindingCallNumbers();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,14 +62,6 @@
             this.menuStrip.Size = new System.Drawing.Size(140, 819);
             this.menuStrip.TabIndex = 0;
             // 
-            // findingCallNumbers1
-            // 
-            this.findingCallNumbers1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.findingCallNumbers1.Location = new System.Drawing.Point(140, 0);
-            this.findingCallNumbers1.Name = "findingCallNumbers1";
-            this.findingCallNumbers1.Size = new System.Drawing.Size(1078, 819);
-            this.findingCallNumbers1.TabIndex = 3;
-            // 
             // identifyingAreas1
             // 
             this.identifyingAreas1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,6 +79,15 @@
             this.replacingBooks1.Size = new System.Drawing.Size(1078, 819);
             this.replacingBooks1.TabIndex = 1;
             // 
+            // findingCallNumbers2
+            // 
+            this.findingCallNumbers2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.findingCallNumbers2.Location = new System.Drawing.Point(140, 0);
+            this.findingCallNumbers2.Name = "findingCallNumbers2";
+            this.findingCallNumbers2.Size = new System.Drawing.Size(1078, 819);
+            this.findingCallNumbers2.TabIndex = 3;
+            this.findingCallNumbers2.Visible = false;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,10 +95,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1218, 819);
+            this.Controls.Add(this.findingCallNumbers2);
             this.Controls.Add(this.identifyingAreas1);
             this.Controls.Add(this.replacingBooks1);
             this.Controls.Add(this.menuStrip);
-            this.Controls.Add(this.findingCallNumbers1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -116,7 +117,7 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private ReplacingBooks replacingBooks1;
         private IdentifyingAreas identifyingAreas1;
-        private FindingCallNumbers findingCallNumbers1;
+        private FindingCallNumbers findingCallNumbers2;
     }
 }
 

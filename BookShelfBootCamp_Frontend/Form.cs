@@ -35,21 +35,21 @@ namespace PROG7132
         private void menuIdentifyingAreas_Click(object sender, EventArgs e)
         {
             replacingBooks1.Visible = false;
-            findingCallNumbers1.Visible = false;
+            findingCallNumbers2.Visible = false;
             identifyingAreas1.Visible = true;
         }
 
         private void menuReplacingBooks_Click(object sender, EventArgs e)
         {
             replacingBooks1.Visible = true;
-            findingCallNumbers1.Visible = false;
+            findingCallNumbers2.Visible = false;
             identifyingAreas1.Visible = false;
         }
 
         private void menuFindingCallNumbers_Click(object sender, EventArgs e)
         {
             replacingBooks1.Visible = false;
-            findingCallNumbers1.Visible = true;
+            findingCallNumbers2.Visible = true;
             identifyingAreas1.Visible = false;
         }
     }

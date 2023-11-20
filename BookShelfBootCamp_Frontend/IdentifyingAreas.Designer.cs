@@ -82,7 +82,8 @@ namespace PROG7132
             // 
             this.badgePictureBox.Location = new System.Drawing.Point(416, 380);
             this.badgePictureBox.Name = "badgePictureBox";
-            this.badgePictureBox.Size = new System.Drawing.Size(250, 206);
+            this.badgePictureBox.Padding = new System.Windows.Forms.Padding(5);
+            this.badgePictureBox.Size = new System.Drawing.Size(246, 216);
             this.badgePictureBox.TabIndex = 6;
             this.badgePictureBox.TabStop = false;
             // 
@@ -90,7 +91,8 @@ namespace PROG7132
             // 
             this.btnShuffleMatches.Location = new System.Drawing.Point(4, 381);
             this.btnShuffleMatches.Name = "btnShuffleMatches";
-            this.btnShuffleMatches.Size = new System.Drawing.Size(114, 23);
+            this.btnShuffleMatches.Padding = new System.Windows.Forms.Padding(5);
+            this.btnShuffleMatches.Size = new System.Drawing.Size(114, 30);
             this.btnShuffleMatches.TabIndex = 7;
             this.btnShuffleMatches.Text = "Shuffle Clues";
             this.btnShuffleMatches.UseVisualStyleBackColor = true;
@@ -98,9 +100,10 @@ namespace PROG7132
             // 
             // btnShuffleClues
             // 
-            this.btnShuffleClues.Location = new System.Drawing.Point(4, 410);
+            this.btnShuffleClues.Location = new System.Drawing.Point(4, 417);
             this.btnShuffleClues.Name = "btnShuffleClues";
-            this.btnShuffleClues.Size = new System.Drawing.Size(114, 23);
+            this.btnShuffleClues.Padding = new System.Windows.Forms.Padding(5);
+            this.btnShuffleClues.Size = new System.Drawing.Size(114, 29);
             this.btnShuffleClues.TabIndex = 8;
             this.btnShuffleClues.Text = "Shuffle Matches";
             this.btnShuffleClues.UseVisualStyleBackColor = true;
@@ -108,9 +111,10 @@ namespace PROG7132
             // 
             // btnShuffleBoth
             // 
-            this.btnShuffleBoth.Location = new System.Drawing.Point(4, 441);
+            this.btnShuffleBoth.Location = new System.Drawing.Point(4, 452);
             this.btnShuffleBoth.Name = "btnShuffleBoth";
-            this.btnShuffleBoth.Size = new System.Drawing.Size(114, 23);
+            this.btnShuffleBoth.Padding = new System.Windows.Forms.Padding(5);
+            this.btnShuffleBoth.Size = new System.Drawing.Size(114, 29);
             this.btnShuffleBoth.TabIndex = 9;
             this.btnShuffleBoth.Text = "Shuffle Both";
             this.btnShuffleBoth.UseVisualStyleBackColor = true;
@@ -123,15 +127,17 @@ namespace PROG7132
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 37);
+            this.label1.Padding = new System.Windows.Forms.Padding(5);
+            this.label1.Size = new System.Drawing.Size(358, 47);
             this.label1.TabIndex = 10;
             this.label1.Text = "Matching the Columns";
             // 
             // btnHint
             // 
-            this.btnHint.Location = new System.Drawing.Point(416, 47);
+            this.btnHint.Location = new System.Drawing.Point(370, 47);
             this.btnHint.Name = "btnHint";
-            this.btnHint.Size = new System.Drawing.Size(75, 23);
+            this.btnHint.Padding = new System.Windows.Forms.Padding(5);
+            this.btnHint.Size = new System.Drawing.Size(86, 36);
             this.btnHint.TabIndex = 11;
             this.btnHint.Text = "How to Play";
             this.btnHint.UseVisualStyleBackColor = true;
@@ -145,9 +151,10 @@ namespace PROG7132
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 100);
+            this.label2.Location = new System.Drawing.Point(3, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.Padding = new System.Windows.Forms.Padding(5);
+            this.label2.Size = new System.Drawing.Size(52, 28);
             this.label2.TabIndex = 12;
             this.label2.Text = "Clues";
             // 
@@ -155,9 +162,10 @@ namespace PROG7132
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(541, 100);
+            this.label3.Location = new System.Drawing.Point(541, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 18);
+            this.label3.Padding = new System.Windows.Forms.Padding(5);
+            this.label3.Size = new System.Drawing.Size(71, 28);
             this.label3.TabIndex = 13;
             this.label3.Text = "Matches";
             // 

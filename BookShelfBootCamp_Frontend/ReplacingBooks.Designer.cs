@@ -105,9 +105,10 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 21);
+            this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 37);
+            this.label1.Padding = new System.Windows.Forms.Padding(5);
+            this.label1.Size = new System.Drawing.Size(272, 47);
             this.label1.TabIndex = 16;
             this.label1.Text = "Replacing Books";
             // 
@@ -115,16 +116,17 @@
             // 
             this.cboMozartCompositions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMozartCompositions.FormattingEnabled = true;
-            this.cboMozartCompositions.Location = new System.Drawing.Point(689, 34);
+            this.cboMozartCompositions.Location = new System.Drawing.Point(695, 52);
             this.cboMozartCompositions.Name = "cboMozartCompositions";
             this.cboMozartCompositions.Size = new System.Drawing.Size(200, 21);
             this.cboMozartCompositions.TabIndex = 17;
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(896, 34);
+            this.btnPlay.Location = new System.Drawing.Point(895, 42);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(50, 23);
+            this.btnPlay.Padding = new System.Windows.Forms.Padding(5);
+            this.btnPlay.Size = new System.Drawing.Size(50, 31);
             this.btnPlay.TabIndex = 18;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
@@ -132,9 +134,10 @@
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(951, 34);
+            this.btnPause.Location = new System.Drawing.Point(951, 42);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(58, 23);
+            this.btnPause.Padding = new System.Windows.Forms.Padding(5);
+            this.btnPause.Size = new System.Drawing.Size(58, 31);
             this.btnPause.TabIndex = 19;
             this.btnPause.Text = "Pause";
             this.btnPause.UseVisualStyleBackColor = true;
@@ -142,9 +145,10 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(1015, 34);
+            this.btnStop.Location = new System.Drawing.Point(1015, 42);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(50, 23);
+            this.btnStop.Padding = new System.Windows.Forms.Padding(5);
+            this.btnStop.Size = new System.Drawing.Size(50, 31);
             this.btnStop.TabIndex = 20;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -156,13 +160,14 @@
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(690, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 25);
+            this.label2.Padding = new System.Windows.Forms.Padding(5);
+            this.label2.Size = new System.Drawing.Size(232, 35);
             this.label2.TabIndex = 21;
             this.label2.Text = "Mozart Media Player";
             // 
             // songProgressBar
             // 
-            this.songProgressBar.Location = new System.Drawing.Point(690, 62);
+            this.songProgressBar.Location = new System.Drawing.Point(695, 79);
             this.songProgressBar.Name = "songProgressBar";
             this.songProgressBar.Size = new System.Drawing.Size(375, 23);
             this.songProgressBar.TabIndex = 22;
@@ -171,6 +176,7 @@
             // 
             this.achievementBadge.Location = new System.Drawing.Point(487, 3);
             this.achievementBadge.Name = "achievementBadge";
+            this.achievementBadge.Padding = new System.Windows.Forms.Padding(5);
             this.achievementBadge.Size = new System.Drawing.Size(196, 154);
             this.achievementBadge.TabIndex = 15;
             this.achievementBadge.TabStop = false;
@@ -178,9 +184,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 62);
+            this.button1.Location = new System.Drawing.Point(3, 54);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Padding = new System.Windows.Forms.Padding(5);
+            this.button1.Size = new System.Drawing.Size(86, 33);
             this.button1.TabIndex = 23;
             this.button1.Text = "How to Play";
             this.button1.UseVisualStyleBackColor = true;

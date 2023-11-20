@@ -43,80 +43,86 @@ namespace Library_Classlib
         }
 
 
-        public void SaveLeaderboardEntry(string userTag, int score)
+        public async Task SaveLeaderboardEntry(string userTag, int score)
         {
-            using (var connection = new SQLiteConnection(connectionString))
+            await Task.Run(() =>
             {
-                connection.Open();
-
-                // Check if the UserTag already exists
-                string checkSql = "SELECT Score FROM Leaderboard WHERE UserTag = @UserTag";
-                int existingScore = -1;
-                using (var command = new SQLiteCommand(checkSql, connection))
+                using (var connection = new SQLiteConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserTag", userTag);
-                    using (var reader = command.ExecuteReader())
+                    connection.Open();
+
+                    // Check if the UserTag already exists
+                    string checkSql = "SELECT Score FROM Leaderboard WHERE UserTag = @UserTag";
+                    int existingScore = -1;
+                    using (var command = new SQLiteCommand(checkSql, connection))
                     {
-                        if (reader.Read())
+                        command.Parameters.AddWithValue("@UserTag", userTag);
+                        using (var reader = command.ExecuteReader())
                         {
-                            existingScore = Convert.ToInt32(reader["Score"]);
+                            if (reader.Read())
+                            {
+                                existingScore = Convert.ToInt32(reader["Score"]);
+                            }
+                        }
+                    }
+
+                    // If UserTag exists and new score is higher, update the score
+                    if (existingScore != -1 && score > existingScore)
+                    {
+                        string updateSql = "UPDATE Leaderboard SET Score = @Score WHERE UserTag = @UserTag";
+                        using (var updateCommand = new SQLiteCommand(updateSql, connection))
+                        {
+                            updateCommand.Parameters.AddWithValue("@UserTag", userTag);
+                            updateCommand.Parameters.AddWithValue("@Score", score);
+                            updateCommand.ExecuteNonQuery();
+                        }
+                    }
+                    // If UserTag does not exist, insert new entry
+                    else if (existingScore == -1)
+                    {
+                        string insertSql = "INSERT INTO Leaderboard (UserTag, Score) VALUES (@UserTag, @Score)";
+                        using (var insertCommand = new SQLiteCommand(insertSql, connection))
+                        {
+                            insertCommand.Parameters.AddWithValue("@UserTag", userTag);
+                            insertCommand.Parameters.AddWithValue("@Score", score);
+                            insertCommand.ExecuteNonQuery();
                         }
                     }
                 }
-
-                // If UserTag exists and new score is higher, update the score
-                if (existingScore != -1 && score > existingScore)
-                {
-                    string updateSql = "UPDATE Leaderboard SET Score = @Score WHERE UserTag = @UserTag";
-                    using (var updateCommand = new SQLiteCommand(updateSql, connection))
-                    {
-                        updateCommand.Parameters.AddWithValue("@UserTag", userTag);
-                        updateCommand.Parameters.AddWithValue("@Score", score);
-                        updateCommand.ExecuteNonQuery();
-                    }
-                }
-                // If UserTag does not exist, insert new entry
-                else if (existingScore == -1)
-                {
-                    string insertSql = "INSERT INTO Leaderboard (UserTag, Score) VALUES (@UserTag, @Score)";
-                    using (var insertCommand = new SQLiteCommand(insertSql, connection))
-                    {
-                        insertCommand.Parameters.AddWithValue("@UserTag", userTag);
-                        insertCommand.Parameters.AddWithValue("@Score", score);
-                        insertCommand.ExecuteNonQuery();
-                    }
-                }
-            }
+            });
         }
 
 
 
-        public List<LeaderboardEntry> GetLeaderboardData()
+        public async Task<List<LeaderboardEntry>> GetLeaderboardData()
         {
-            List<LeaderboardEntry> leaderboard = new List<LeaderboardEntry>();
-
-            using (var connection = new SQLiteConnection(connectionString))
+            return await Task.Run(() =>
             {
-                connection.Open();
+                List<LeaderboardEntry> leaderboard = new List<LeaderboardEntry>();
 
-                string sql = "SELECT UserTag, Score FROM Leaderboard ORDER BY Score DESC";
-                using (var command = new SQLiteCommand(sql, connection))
+                using (var connection = new SQLiteConnection(connectionString))
                 {
-                    using (var reader = command.ExecuteReader())
+                    connection.Open();
+
+                    string sql = "SELECT UserTag, Score FROM Leaderboard ORDER BY Score DESC";
+                    using (var command = new SQLiteCommand(sql, connection))
                     {
-                        while (reader.Read())
+                        using (var reader = command.ExecuteReader())
                         {
-                            LeaderboardEntry entry = new LeaderboardEntry
+                            while (reader.Read())
                             {
-                                UserTag = reader["UserTag"].ToString(),
-                                Score = Convert.ToInt32(reader["Score"])
-                            };
-                            leaderboard.Add(entry);
+                                LeaderboardEntry entry = new LeaderboardEntry
+                                {
+                                    UserTag = reader["UserTag"].ToString(),
+                                    Score = Convert.ToInt32(reader["Score"])
+                                };
+                                leaderboard.Add(entry);
+                            }
                         }
                     }
                 }
-            }
-            return leaderboard;
+                return leaderboard;
+            });
         }
     }
 

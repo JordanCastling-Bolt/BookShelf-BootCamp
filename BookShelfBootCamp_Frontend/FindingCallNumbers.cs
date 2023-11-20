@@ -15,6 +15,7 @@ namespace PROG7132
 {
     public partial class FindingCallNumbers : UserControl
     {
+        private DatabaseHandler databaseHandler; // Added this
         private QuizManager quizManager;
         private List<string> currentOptions;
         private int lives;
@@ -24,20 +25,31 @@ namespace PROG7132
         public FindingCallNumbers()
         {
             InitializeComponent();
-            InitializeQuiz();
-            InitializeLeaderboardListView();
+
+            // Synchronous initializations
             lives = 3;
-            score = 0; 
-            streak = 0; 
+            score = 0;
+            streak = 0;
             InitializeLivesUI();
+            databaseHandler = new DatabaseHandler();
 
             optionButton1.Click += optionButton_Click;
             optionButton2.Click += optionButton_Click;
             optionButton3.Click += optionButton_Click;
             optionButton4.Click += optionButton_Click;
+
+            // Call async initialization
+            InitializeAsync();
         }
 
-        private void InitializeQuiz()
+        private async Task InitializeAsync()
+        {
+            await InitializeQuiz();
+            await InitializeLeaderboardListView();
+        }
+    
+
+    private async Task InitializeQuiz()
         {
             try
             {
@@ -81,7 +93,7 @@ namespace PROG7132
             UpdateLivesDisplay();
         }
 
-        private void InitializeLeaderboardListView()
+        private async Task InitializeLeaderboardListView()
         {
             // Assuming your ListView is named leaderboardListView
             // Add columns for user tag and score
@@ -92,7 +104,7 @@ namespace PROG7132
             leaderboardListView.View = View.Details;
 
             // Update the display
-            UpdateLeaderboardDisplay();
+            await UpdateLeaderboardDisplay();
         }
 
         private void UpdateLivesDisplay()
@@ -192,23 +204,25 @@ namespace PROG7132
 
         }
 
-        private void UpdateLeaderboardDisplay()
+        private async Task UpdateLeaderboardDisplay()
         {
-            var databaseHandler = new DatabaseHandler();
-            var leaderboardData = databaseHandler.GetLeaderboardData();
+            var leaderboardData = await databaseHandler.GetLeaderboardData();
 
-            leaderboardListView.Items.Clear(); // Clear existing items
-
-            foreach (var entry in leaderboardData)
+            leaderboardListView.Invoke((MethodInvoker)(() =>
             {
-                var item = new ListViewItem(entry.UserTag);
-                item.SubItems.Add(entry.Score.ToString());
-                leaderboardListView.Items.Add(item);
-            }
+                leaderboardListView.Items.Clear(); // Clear existing items
+
+                foreach (var entry in leaderboardData)
+                {
+                    var item = new ListViewItem(entry.UserTag);
+                    item.SubItems.Add(entry.Score.ToString());
+                    leaderboardListView.Items.Add(item);
+                }
+            }));
         }
 
 
-        private void ResetGame()
+        private async void ResetGame()
         {
             lives = 3; // Reset lives
             streak = 0; // Reset streak
@@ -216,9 +230,8 @@ namespace PROG7132
 
             if (!string.IsNullOrWhiteSpace(userTag))
             {
-                var databaseHandler = new DatabaseHandler();
-                databaseHandler.SaveLeaderboardEntry(userTag, score); // Save the score
-                UpdateLeaderboardDisplay(); // Update leaderboard display
+                await databaseHandler.SaveLeaderboardEntry(userTag, score);
+                await UpdateLeaderboardDisplay(); // Update leaderboard display
             }
 
             score = 0; // Reset score after saving to leaderboard
