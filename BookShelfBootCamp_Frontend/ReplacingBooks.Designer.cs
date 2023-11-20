@@ -184,6 +184,7 @@
             // 
             // button1
             // 
+            this.button1.AutoSize = true;
             this.button1.Location = new System.Drawing.Point(3, 54);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(5);

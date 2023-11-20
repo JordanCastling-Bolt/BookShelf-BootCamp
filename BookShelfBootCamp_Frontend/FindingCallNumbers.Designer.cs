@@ -101,6 +101,9 @@ namespace PROG7132
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold);
@@ -113,6 +116,9 @@ namespace PROG7132
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 191);
@@ -160,7 +166,7 @@ namespace PROG7132
             // leaderboardListView
             // 
             this.leaderboardListView.HideSelection = false;
-            this.leaderboardListView.Location = new System.Drawing.Point(717, 48);
+            this.leaderboardListView.Location = new System.Drawing.Point(492, 46);
             this.leaderboardListView.Name = "leaderboardListView";
             this.leaderboardListView.Size = new System.Drawing.Size(266, 138);
             this.leaderboardListView.TabIndex = 11;
@@ -168,9 +174,12 @@ namespace PROG7132
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(717, 9);
+            this.label3.Location = new System.Drawing.Point(488, 9);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(5);
             this.label3.Size = new System.Drawing.Size(125, 34);

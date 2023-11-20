@@ -22,9 +22,9 @@
             this.menuIdentifyingAreas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFindingCallNumbers = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.findingCallNumbers2 = new PROG7132.FindingCallNumbers();
             this.identifyingAreas1 = new PROG7132.IdentifyingAreas();
             this.replacingBooks1 = new PROG7132.ReplacingBooks();
-            this.findingCallNumbers2 = new PROG7132.FindingCallNumbers();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,8 +62,18 @@
             this.menuStrip.Size = new System.Drawing.Size(140, 819);
             this.menuStrip.TabIndex = 0;
             // 
+            // findingCallNumbers2
+            // 
+            this.findingCallNumbers2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.findingCallNumbers2.Location = new System.Drawing.Point(140, 0);
+            this.findingCallNumbers2.Name = "findingCallNumbers2";
+            this.findingCallNumbers2.Size = new System.Drawing.Size(1078, 819);
+            this.findingCallNumbers2.TabIndex = 3;
+            this.findingCallNumbers2.Visible = false;
+            // 
             // identifyingAreas1
             // 
+            this.identifyingAreas1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.identifyingAreas1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.identifyingAreas1.Location = new System.Drawing.Point(140, 0);
             this.identifyingAreas1.Name = "identifyingAreas1";
@@ -78,15 +88,6 @@
             this.replacingBooks1.Name = "replacingBooks1";
             this.replacingBooks1.Size = new System.Drawing.Size(1078, 819);
             this.replacingBooks1.TabIndex = 1;
-            // 
-            // findingCallNumbers2
-            // 
-            this.findingCallNumbers2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.findingCallNumbers2.Location = new System.Drawing.Point(140, 0);
-            this.findingCallNumbers2.Name = "findingCallNumbers2";
-            this.findingCallNumbers2.Size = new System.Drawing.Size(1078, 819);
-            this.findingCallNumbers2.TabIndex = 3;
-            this.findingCallNumbers2.Visible = false;
             // 
             // Form
             // 
