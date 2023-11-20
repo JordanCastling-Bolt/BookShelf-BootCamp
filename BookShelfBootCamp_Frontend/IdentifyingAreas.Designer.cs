@@ -49,9 +49,6 @@ namespace PROG7132
             // CallNumbersListView
             // 
             this.CallNumbersListView.AllowDrop = true;
-            this.CallNumbersListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.CallNumbersListView.HideSelection = false;
             this.CallNumbersListView.Location = new System.Drawing.Point(3, 121);
             this.CallNumbersListView.Name = "CallNumbersListView";
@@ -63,9 +60,6 @@ namespace PROG7132
             // DescriptionsListView
             // 
             this.DescriptionsListView.AllowDrop = true;
-            this.DescriptionsListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.DescriptionsListView.HideSelection = false;
             this.DescriptionsListView.Location = new System.Drawing.Point(544, 121);
             this.DescriptionsListView.Name = "DescriptionsListView";
@@ -86,9 +80,6 @@ namespace PROG7132
             // 
             // badgePictureBox
             // 
-            this.badgePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.badgePictureBox.Location = new System.Drawing.Point(416, 380);
             this.badgePictureBox.Name = "badgePictureBox";
             this.badgePictureBox.Padding = new System.Windows.Forms.Padding(5);
@@ -98,9 +89,6 @@ namespace PROG7132
             // 
             // btnShuffleMatches
             // 
-            this.btnShuffleMatches.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShuffleMatches.Location = new System.Drawing.Point(4, 381);
             this.btnShuffleMatches.Name = "btnShuffleMatches";
             this.btnShuffleMatches.Padding = new System.Windows.Forms.Padding(5);
@@ -112,9 +100,6 @@ namespace PROG7132
             // 
             // btnShuffleClues
             // 
-            this.btnShuffleClues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShuffleClues.Location = new System.Drawing.Point(4, 417);
             this.btnShuffleClues.Name = "btnShuffleClues";
             this.btnShuffleClues.Padding = new System.Windows.Forms.Padding(5);
@@ -126,9 +111,6 @@ namespace PROG7132
             // 
             // btnShuffleBoth
             // 
-            this.btnShuffleBoth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShuffleBoth.Location = new System.Drawing.Point(4, 452);
             this.btnShuffleBoth.Name = "btnShuffleBoth";
             this.btnShuffleBoth.Padding = new System.Windows.Forms.Padding(5);
@@ -140,9 +122,6 @@ namespace PROG7132
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,9 +134,6 @@ namespace PROG7132
             // 
             // btnHint
             // 
-            this.btnHint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHint.Location = new System.Drawing.Point(370, 47);
             this.btnHint.Name = "btnHint";
             this.btnHint.Padding = new System.Windows.Forms.Padding(5);

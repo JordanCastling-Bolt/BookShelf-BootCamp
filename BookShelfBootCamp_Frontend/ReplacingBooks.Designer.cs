@@ -51,9 +51,9 @@
             // GeneratedListView
             // 
             this.GeneratedListView.HideSelection = false;
-            this.GeneratedListView.Location = new System.Drawing.Point(339, 3);
+            this.GeneratedListView.Location = new System.Drawing.Point(281, 4);
             this.GeneratedListView.Name = "GeneratedListView";
-            this.GeneratedListView.Size = new System.Drawing.Size(142, 676);
+            this.GeneratedListView.Size = new System.Drawing.Size(142, 689);
             this.GeneratedListView.TabIndex = 14;
             this.GeneratedListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -69,10 +69,10 @@
             // replaceBooksBar
             // 
             this.replaceBooksBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.replaceBooksBar.Location = new System.Drawing.Point(0, 775);
+            this.replaceBooksBar.Location = new System.Drawing.Point(0, 719);
             this.replaceBooksBar.Maximum = 10;
             this.replaceBooksBar.Name = "replaceBooksBar";
-            this.replaceBooksBar.Size = new System.Drawing.Size(1080, 23);
+            this.replaceBooksBar.Size = new System.Drawing.Size(862, 23);
             this.replaceBooksBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.replaceBooksBar.TabIndex = 12;
             // 
@@ -80,7 +80,7 @@
             // 
             this.btnGenerateCallNumbers.AutoSize = true;
             this.btnGenerateCallNumbers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnGenerateCallNumbers.Location = new System.Drawing.Point(3, 694);
+            this.btnGenerateCallNumbers.Location = new System.Drawing.Point(0, 670);
             this.btnGenerateCallNumbers.Name = "btnGenerateCallNumbers";
             this.btnGenerateCallNumbers.Size = new System.Drawing.Size(126, 23);
             this.btnGenerateCallNumbers.TabIndex = 11;
@@ -92,7 +92,7 @@
             // 
             this.btnCheckOrder.AutoSize = true;
             this.btnCheckOrder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCheckOrder.Location = new System.Drawing.Point(135, 694);
+            this.btnCheckOrder.Location = new System.Drawing.Point(132, 670);
             this.btnCheckOrder.Name = "btnCheckOrder";
             this.btnCheckOrder.Size = new System.Drawing.Size(77, 23);
             this.btnCheckOrder.TabIndex = 10;
@@ -116,14 +116,14 @@
             // 
             this.cboMozartCompositions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMozartCompositions.FormattingEnabled = true;
-            this.cboMozartCompositions.Location = new System.Drawing.Point(695, 52);
+            this.cboMozartCompositions.Location = new System.Drawing.Point(636, 42);
             this.cboMozartCompositions.Name = "cboMozartCompositions";
             this.cboMozartCompositions.Size = new System.Drawing.Size(200, 21);
             this.cboMozartCompositions.TabIndex = 17;
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(895, 42);
+            this.btnPlay.Location = new System.Drawing.Point(636, 108);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Padding = new System.Windows.Forms.Padding(5);
             this.btnPlay.Size = new System.Drawing.Size(50, 31);
@@ -134,10 +134,10 @@
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(951, 42);
+            this.btnPause.Location = new System.Drawing.Point(692, 108);
             this.btnPause.Name = "btnPause";
             this.btnPause.Padding = new System.Windows.Forms.Padding(5);
-            this.btnPause.Size = new System.Drawing.Size(58, 31);
+            this.btnPause.Size = new System.Drawing.Size(68, 31);
             this.btnPause.TabIndex = 19;
             this.btnPause.Text = "Pause";
             this.btnPause.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(1015, 42);
+            this.btnStop.Location = new System.Drawing.Point(766, 108);
             this.btnStop.Name = "btnStop";
             this.btnStop.Padding = new System.Windows.Forms.Padding(5);
             this.btnStop.Size = new System.Drawing.Size(50, 31);
@@ -158,7 +158,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(690, 4);
+            this.label2.Location = new System.Drawing.Point(631, 4);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(5);
             this.label2.Size = new System.Drawing.Size(232, 35);
@@ -167,14 +167,14 @@
             // 
             // songProgressBar
             // 
-            this.songProgressBar.Location = new System.Drawing.Point(695, 79);
+            this.songProgressBar.Location = new System.Drawing.Point(636, 79);
             this.songProgressBar.Name = "songProgressBar";
-            this.songProgressBar.Size = new System.Drawing.Size(375, 23);
+            this.songProgressBar.Size = new System.Drawing.Size(200, 23);
             this.songProgressBar.TabIndex = 22;
             // 
             // achievementBadge
             // 
-            this.achievementBadge.Location = new System.Drawing.Point(487, 3);
+            this.achievementBadge.Location = new System.Drawing.Point(429, 4);
             this.achievementBadge.Name = "achievementBadge";
             this.achievementBadge.Padding = new System.Windows.Forms.Padding(5);
             this.achievementBadge.Size = new System.Drawing.Size(196, 154);
@@ -213,7 +213,7 @@
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnStop);
             this.Name = "ReplacingBooks";
-            this.Size = new System.Drawing.Size(1080, 798);
+            this.Size = new System.Drawing.Size(862, 742);
             ((System.ComponentModel.ISupportInitialize)(this.achievementBadge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
