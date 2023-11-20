@@ -9,25 +9,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library_Classlib;
 
 namespace PROG7132
 {
     public partial class FindingCallNumbers : UserControl
     {
         private QuizManager quizManager;
-        private List<string> currentOptions; // This should be List<string> now
+        private List<string> currentOptions;
         private int lives;
-
-        private PictureBox life1;
-        private PictureBox life2;
-        private PictureBox life3;
+        private int score;
+        private int streak;
 
         public FindingCallNumbers()
         {
             InitializeComponent();
             InitializeQuiz();
-
+            InitializeLeaderboardListView();
             lives = 3;
+            score = 0; 
+            streak = 0; 
             InitializeLivesUI();
 
             optionButton1.Click += optionButton_Click;
@@ -55,6 +56,7 @@ namespace PROG7132
             {
                 MessageBox.Show($"Error initializing quiz: {ex.Message}");
             }
+            UpdateScoreDisplay();
         }
 
         private void InitializeLivesUI()
@@ -79,6 +81,19 @@ namespace PROG7132
             UpdateLivesDisplay();
         }
 
+        private void InitializeLeaderboardListView()
+        {
+            // Assuming your ListView is named leaderboardListView
+            // Add columns for user tag and score
+            leaderboardListView.Columns.Add("User Tag", -2, HorizontalAlignment.Left);
+            leaderboardListView.Columns.Add("Score", -2, HorizontalAlignment.Left);
+
+            // Set the view to show details
+            leaderboardListView.View = View.Details;
+
+            // Update the display
+            UpdateLeaderboardDisplay();
+        }
 
         private void UpdateLivesDisplay()
         {
@@ -93,15 +108,17 @@ namespace PROG7132
             // Load the new question's description
             string questionDescription = quizManager.NewQuestion();
 
+            questionLabel.Text = EscapeAmpersand(questionDescription);
+
             // Get the options as a list of strings
             currentOptions = quizManager.GetOptions(); // This should be List<string>
 
             // Update UI with new question and options
-            questionLabel.Text = questionDescription;
-            optionButton1.Text = currentOptions[0];
-            optionButton2.Text = currentOptions[1];
-            optionButton3.Text = currentOptions[2];
-            optionButton4.Text = currentOptions[3];
+            optionButton1.Text = EscapeAmpersand(currentOptions[0]);
+            optionButton2.Text = EscapeAmpersand(currentOptions[1]);
+            optionButton3.Text = EscapeAmpersand(currentOptions[2]);
+            optionButton4.Text = EscapeAmpersand(currentOptions[3]);
+            UpdateScoreDisplay();
         }
 
         private void optionButton_Click(object sender, EventArgs e)
@@ -114,6 +131,11 @@ namespace PROG7132
 
                 if (isCorrect)
                 {
+                    streak++;
+                    score += 10; // Base points for correct answer
+                    if (streak > 1) score += (streak - 1) * 5; // Bonus points for streaks
+                    UpdateScoreDisplay();
+
                     MessageBox.Show("Correct answer!");
                     if (quizManager.IsQuizAtThirdStep())
                     {
@@ -137,6 +159,8 @@ namespace PROG7132
                 }
                 else
                 {
+                    streak = 0; // Reset streak
+                    score -= 2; // Penalty for wrong answer
                     MessageBox.Show("Incorrect answer. Try again.");
                     // The answer was incorrect, you might want to reload the same options or provide feedback
                     lives--; // Decrease life
@@ -147,26 +171,95 @@ namespace PROG7132
                         MessageBox.Show("You've run out of lives!");
                         ResetGame();
                     }
+                    UpdateScoreDisplay();
                 }
             }
+        }
+
+        private void UpdateScoreDisplay()
+        {
+            // Assuming you have a label on your form to display the score
+            scoreLabel.Text = $"Score: {score}";
         }
 
         // Add this method to update the option buttons with new options
         private void UpdateOptionButtons(List<string> options)
         {
-            optionButton1.Text = options.Count > 0 ? options[0] : string.Empty;
-            optionButton2.Text = options.Count > 1 ? options[1] : string.Empty;
-            optionButton3.Text = options.Count > 2 ? options[2] : string.Empty;
-            optionButton4.Text = options.Count > 3 ? options[3] : string.Empty;
+            optionButton1.Text = options.Count > 0 ? EscapeAmpersand(options[0]) : string.Empty;
+            optionButton2.Text = options.Count > 1 ? EscapeAmpersand(options[1]) : string.Empty;
+            optionButton3.Text = options.Count > 2 ? EscapeAmpersand(options[2]) : string.Empty;
+            optionButton4.Text = options.Count > 3 ? EscapeAmpersand(options[3]) : string.Empty;
+
         }
+
+        private void UpdateLeaderboardDisplay()
+        {
+            var databaseHandler = new DatabaseHandler();
+            var leaderboardData = databaseHandler.GetLeaderboardData();
+
+            leaderboardListView.Items.Clear(); // Clear existing items
+
+            foreach (var entry in leaderboardData)
+            {
+                var item = new ListViewItem(entry.UserTag);
+                item.SubItems.Add(entry.Score.ToString());
+                leaderboardListView.Items.Add(item);
+            }
+        }
+
 
         private void ResetGame()
         {
             lives = 3; // Reset lives
+            streak = 0; // Reset streak
+            string userTag = GetUserTag(); // Prompt for user tag
+
+            if (!string.IsNullOrWhiteSpace(userTag))
+            {
+                var databaseHandler = new DatabaseHandler();
+                databaseHandler.SaveLeaderboardEntry(userTag, score); // Save the score
+                UpdateLeaderboardDisplay(); // Update leaderboard display
+            }
+
+            score = 0; // Reset score after saving to leaderboard
             UpdateLivesDisplay();
+            UpdateScoreDisplay(); // Update score display
             InitializeQuiz(); // Reset the quiz to the beginning
-                              
         }
 
+
+        private string EscapeAmpersand(string text)
+        {
+            return text.Replace("&", "&&");
+        }
+
+        private string GetUserTag()
+        {
+            // Simple InputBox for user tag
+            return Microsoft.VisualBasic.Interaction.InputBox("Enter your user tag for the leaderboard:", "User Tag", "DefaultTag");
+        }
+
+        private void ShowHowToPlayAlert()
+        {
+            string howToPlayMessage = "How to Play:\n\n" +
+                                      "1. A question related to library call numbers will be displayed.\n" +
+                                      "2. You will be given four options. Choose the correct one.\n" +
+                                      "3. Each correct answer increases your score by 10 points.\n" +
+                                      "4. For each consecutive correct answer (a streak), you earn additional bonus points. " +
+                                      "The first correct answer in a streak earns 10 points, and each subsequent correct answer in the streak earns an extra 5 points. " +
+                                      "For example, the second correct answer in a streak gives you 15 points, the third gives you 20 points, and so on.\n" +
+                                      "5. An incorrect answer breaks the streak and decreases your score by 2 points.\n" +
+                                      "6. You have 3 lives. An incorrect answer costs you one life. The game ends when you run out of lives.\n" +
+                                      "7. When you lose all lives, you can enter your tag to record your score on the leaderboard.\n\n" +
+                                      "Good luck and have fun!";
+
+            MessageBox.Show(howToPlayMessage, "How to Play Finding Call Numbers");
+        }
+
+
+        private void howToPlay_Click(object sender, EventArgs e)
+        {
+            ShowHowToPlayAlert();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace PROG7132
+﻿using System.Windows.Forms;
+
+namespace PROG7132
 {
     partial class FindingCallNumbers
     {
@@ -38,6 +40,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.leaderboardListView = new System.Windows.Forms.ListView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.howToPlay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -133,10 +139,51 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Location = new System.Drawing.Point(15, 416);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(0, 13);
+            this.scoreLabel.TabIndex = 10;
+            // 
+            // leaderboardListView
+            // 
+            this.leaderboardListView.HideSelection = false;
+            this.leaderboardListView.Location = new System.Drawing.Point(717, 36);
+            this.leaderboardListView.Name = "leaderboardListView";
+            this.leaderboardListView.Size = new System.Drawing.Size(266, 138);
+            this.leaderboardListView.TabIndex = 11;
+            this.leaderboardListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(717, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 24);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Leaderboard";
+            // 
+            // howToPlay
+            // 
+            this.howToPlay.Location = new System.Drawing.Point(354, 22);
+            this.howToPlay.Name = "howToPlay";
+            this.howToPlay.Size = new System.Drawing.Size(75, 23);
+            this.howToPlay.TabIndex = 13;
+            this.howToPlay.Text = "How to Play";
+            this.howToPlay.UseVisualStyleBackColor = true;
+            this.howToPlay.Click += new System.EventHandler(this.howToPlay_Click);
+            // 
             // FindingCallNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.howToPlay);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.leaderboardListView);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -167,6 +214,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.ListView leaderboardListView;
+        private Label label3;
+        private Button howToPlay;
     }
 }
 #endregion

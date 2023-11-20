@@ -88,6 +88,9 @@ namespace Library_Classlib.FindingCallNumbers
                     };
                     mainClassNode.Children.Add(divisionKey, divisionNode);
 
+                    Console.WriteLine($"Main Class Description: {mainClassNode.Description}");
+
+
                     // Iterate over sections
                     if (divisionValue["sections"] != null)
                     {

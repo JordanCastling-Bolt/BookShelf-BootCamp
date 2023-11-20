@@ -103,6 +103,28 @@ namespace PROG7132.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Brendan_Kinsella___Mozart___Piano_Sonata_in_B_flat_major_III_Allegretto_Grazioso_chosic_com_ {
+            get {
+                object obj = ResourceManager.GetObject("Brendan_Kinsella___Mozart___Piano_Sonata_in_B_flat_major_III_Allegretto_Grazioso_" +
+                        "chosic_com_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Brendan_Kinsella___Mozart___Sonata_No_13_In_B_Flat_Major_K333___II_Andante_Cantabile_chosic_com_ {
+            get {
+                object obj = ResourceManager.GetObject("Brendan_Kinsella___Mozart___Sonata_No_13_In_B_Flat_Major_K333___II_Andante_Cantab" +
+                        "ile_chosic_com_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] DeweyClassificationComplete {
             get {
                 object obj = ResourceManager.GetObject("DeweyClassificationComplete", resourceCulture);
@@ -117,6 +139,36 @@ namespace PROG7132.Properties {
             get {
                 object obj = ResourceManager.GetObject("Life", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Mozart_Serenade_in_G_major_chosic_com_ {
+            get {
+                object obj = ResourceManager.GetObject("Mozart_Serenade_in_G_major_chosic_com_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Overture_to_The_marriage_of_Figaro_K__492_chosic_com_ {
+            get {
+                object obj = ResourceManager.GetObject("Overture_to_The_marriage_of_Figaro_K__492_chosic_com_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Piano_Concerto_no__21_in_C_major_K__467_II__Andante_chosic_com_ {
+            get {
+                object obj = ResourceManager.GetObject("Piano_Concerto_no__21_in_C_major_K__467_II__Andante_chosic_com_", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

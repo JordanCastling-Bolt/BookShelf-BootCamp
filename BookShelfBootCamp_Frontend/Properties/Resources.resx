@@ -121,11 +121,26 @@
   <data name="badge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\badge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Brendan_Kinsella___Mozart___Piano_Sonata_in_B_flat_major_III_Allegretto_Grazioso_chosic_com_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Brendan_Kinsella_-_Mozart_-_Piano_Sonata_in_B-flat_major_III_Allegretto_Grazioso(chosic.com).mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Brendan_Kinsella___Mozart___Sonata_No_13_In_B_Flat_Major_K333___II_Andante_Cantabile_chosic_com_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Brendan_Kinsella_-_Mozart_-_Sonata_No_13_In_B_Flat_Major_K333_-_II_Andante_Cantabile(chosic.com).mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="DeweyClassificationComplete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DeweyClassificationComplete.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Life" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Life.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mozart_Serenade_in_G_major_chosic_com_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mozart-Serenade-in-G-major(chosic.com).mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Overture_to_The_marriage_of_Figaro_K__492_chosic_com_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Overture-to-The-marriage-of-Figaro-K.-492(chosic.com).mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Piano_Concerto_no__21_in_C_major_K__467_II__Andante_chosic_com_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Piano-Concerto-no.-21-in-C-major-K.-467-II.-Andante(chosic.com).mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="_10streak" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\10streak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

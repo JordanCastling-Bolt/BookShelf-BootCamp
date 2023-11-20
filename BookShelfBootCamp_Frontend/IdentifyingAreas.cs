@@ -8,6 +8,17 @@ namespace PROG7132
 {
     public partial class IdentifyingAreas : UserControl
     {
+        /// <summary>
+        /// Enumeration to define shuffle modes.
+        /// </summary>
+        enum ShuffleMode
+        {
+            None,
+            Matches,
+            Clues,
+            Both
+        }
+
         // Class variables
         private readonly MTC_Logic libraryLogic = new MTC_Logic();
         private readonly Dictionary<string, string> correctMatches = new Dictionary<string, string>();
@@ -230,17 +241,6 @@ namespace PROG7132
         }
 
         /// <summary>
-        /// Enumeration to define shuffle modes.
-        /// </summary>
-        enum ShuffleMode
-        {
-            None,
-            Matches,
-            Clues,
-            Both
-        }
-
-        /// <summary>
         /// Shuffles the items in a ListView.
         /// </summary>
         private void ShuffleListViewItems(ListView listView)
@@ -293,7 +293,7 @@ namespace PROG7132
         {
             MessageBox.Show(
                "How to Play:\n" +
-               "1. Drag items from the left (Clues) to the right (Matches) to match them.\n" +
+               "1. Drag items from the left (Clues) onto the correct match (Matches). \n" +
                "2. A successful match will remove both items from the lists while an incorrect match will highlight the Clue in red.\n" +
                "3. Match all items correctly to complete the round.\n" +
                "4. New rounds will swap Categories and Call Numbers and vice versa. \n" +

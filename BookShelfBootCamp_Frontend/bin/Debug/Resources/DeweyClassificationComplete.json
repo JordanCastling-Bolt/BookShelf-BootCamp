@@ -1,0 +1,946 @@
+{
+    "main_classes": {
+        "000": {
+            "description": "Computer science, information & general works",
+            "divisions": {
+                "010": {
+                    "description": "Bibliography",
+                    "sections": {
+                        "011": "Bibliographies",
+                        "012": "Bibliographies of individuals"
+                    }
+                },
+                "020": {
+                    "description": "Library & information sciences",
+                    "sections": {
+                        "021": "Relationships of libraries, archives & information centers",
+                        "022": "Administration of physical plant"
+                    }
+                },
+                "030": {
+                    "description": "General encyclopedic works",
+                    "sections": {
+                        "031": "Encyclopedias in American English",
+                        "032": "Encyclopedias in English"
+                    }
+                },
+                "050": {
+                    "description": "General serial publications",
+                    "sections": {
+                        "051": "General serial publications in American English",
+                        "052": "General serial publications in English"
+                    }
+                },
+                "060": {
+                    "description": "General organizations & museum science",
+                    "sections": {
+                        "061": "Organizations in North America",
+                        "062": "Organizations in British Isles; in England"
+                    }
+                },
+                "070": {
+                    "description": "News media, journalism & publishing",
+                    "sections": {
+                        "071": "Newspapers in North America",
+                        "072": "Newspapers in British Isles; in England"
+                    }
+                },
+                "080": {
+                    "description": "Quotations",
+                    "sections": {
+                        "081": "Quotations in American English",
+                        "082": "Quotations in English"
+                    }
+                },
+                "090": {
+                    "description": "Manuscripts & rare books",
+                    "sections": {
+                        "091": "Manuscripts",
+                        "092": "Block books"
+                    }
+                }
+            }
+        },
+        "100": {
+            "description": "\u2013 Philosophy & Psychology",
+            "divisions": {
+                "110": {
+                    "description": "Metaphysics",
+                    "sections": {
+                        "111": "Ontology",
+                        "113": "Cosmology (Philosophy of nature)"
+                    }
+                },
+                "120": {
+                    "description": "Epistemology",
+                    "sections": {
+                        "121": "Epistemology (Theory of knowledge)",
+                        "122": "Causation"
+                    }
+                },
+                "130": {
+                    "description": "Parapsychology & occultism",
+                    "sections": {
+                        "131": "Parapsychological and occult methods",
+                        "133": "Specific topics in parapsychology & occultism"
+                    }
+                },
+                "140": {
+                    "description": "Specific philosophical schools",
+                    "sections": {
+                        "141": "Idealism and related systems",
+                        "142": "Critical philosophy"
+                    }
+                },
+                "150": {
+                    "description": "Psychology",
+                    "sections": {
+                        "152": "Perception, movement, emotions & drives",
+                        "153": "Conscious mental processes & intelligence"
+                    }
+                },
+                "160": {
+                    "description": "Logic",
+                    "sections": {
+                        "161": "Induction",
+                        "162": "Deduction"
+                    }
+                },
+                "170": {
+                    "description": "Ethics",
+                    "sections": {
+                        "171": "Ethical systems",
+                        "172": "Political ethics"
+                    }
+                },
+                "180": {
+                    "description": "Ancient, medieval, & eastern philosophy",
+                    "sections": {
+                        "181": "Eastern philosophy",
+                        "182": "Pre-Socratic Greek philosophies"
+                    }
+                },
+                "190": {
+                    "description": "Modern western philosophy",
+                    "sections": {
+                        "191": "Philosophy of United States and Canada",
+                        "192": "Philosophy of British Isles\u200b"
+                    }
+                }
+            }
+        },
+        "200": {
+            "description": "\u2013 Religion",
+            "divisions": {
+                "210": {
+                    "description": "Philosophy & theory of religion",
+                    "sections": {
+                        "211": "Concepts of God",
+                        "212": "Existence, knowability & attributes of God"
+                    }
+                },
+                "220": {
+                    "description": "Bible",
+                    "sections": {
+                        "221": "Old Testament (Tanakh)",
+                        "222": "Historical books of Old Testament"
+                    }
+                },
+                "230": {
+                    "description": "Christianity",
+                    "sections": {
+                        "231": "God",
+                        "232": "Jesus Christ and his family"
+                    }
+                },
+                "240": {
+                    "description": "Christian practice & observance",
+                    "sections": {
+                        "241": "Christian ethics",
+                        "242": "Devotional literature"
+                    }
+                },
+                "250": {
+                    "description": "Christian pastoral practice & religious orders",
+                    "sections": {
+                        "251": "Preaching (Homiletics)",
+                        "252": "Texts of sermons"
+                    }
+                },
+                "260": {
+                    "description": "Christian organization, social work & worship",
+                    "sections": {
+                        "261": "Social theology and interreligious relations",
+                        "262": "Ecclesiology"
+                    }
+                },
+                "270": {
+                    "description": "History of Christianity",
+                    "sections": {
+                        "271": "Religious orders in church history",
+                        "272": "Persecutions in general church history"
+                    }
+                },
+                "280": {
+                    "description": "Christian denominations",
+                    "sections": {
+                        "281": "Early church and Eastern churches",
+                        "282": "Roman Catholic Church"
+                    }
+                },
+                "290": {
+                    "description": "Other religions",
+                    "sections": {
+                        "292": "Classical religions (Greek & Roman religion)",
+                        "293": "Germanic religion"
+                    }
+                }
+            }
+        },
+        "300": {
+            "description": "\u2013 Social Sciences",
+            "divisions": {
+                "310": {
+                    "description": "Collections of general statistics",
+                    "sections": {
+                        "314": "General statistics of Europe",
+                        "315": "General statistics of Asia"
+                    }
+                },
+                "320": {
+                    "description": "Political science (Politics and government)",
+                    "sections": {
+                        "321": "Systems of governments and states",
+                        "322": "Relation of state to organized groups"
+                    }
+                },
+                "330": {
+                    "description": "Economics",
+                    "sections": {
+                        "331": "Labor economics",
+                        "332": "Financial economics"
+                    }
+                },
+                "340": {
+                    "description": "Law",
+                    "sections": {
+                        "341": "Law of nations",
+                        "342": "Constitutional and administrative law"
+                    }
+                },
+                "350": {
+                    "description": "Public administration and military science",
+                    "sections": {
+                        "351": "Public administration",
+                        "352": "General considerations of public administration"
+                    }
+                },
+                "360": {
+                    "description": "Social problems and services; associations",
+                    "sections": {
+                        "361": "Social problems and services",
+                        "362": "Social problems and services to groups"
+                    }
+                },
+                "370": {
+                    "description": "Education",
+                    "sections": {
+                        "371": "Schools and their activities; special education",
+                        "372": "Primary education (Elementary education)"
+                    }
+                },
+                "380": {
+                    "description": "Commerce, communications, transportation",
+                    "sections": {
+                        "381": "Commerce (Trade)",
+                        "382": "International commerce (Foreign trade)"
+                    }
+                },
+                "390": {
+                    "description": "Customs, etiquette, folklore",
+                    "sections": {
+                        "391": "Costume and personal appearance",
+                        "392": "Customs of life cycle and domestic life"
+                    }
+                }
+            }
+        },
+        "400": {
+            "description": "\u2013 Language",
+            "divisions": {
+                "410": {
+                    "description": "Linguistics",
+                    "sections": {
+                        "411": "Writing systems",
+                        "412": "Etymology"
+                    }
+                },
+                "420": {
+                    "description": "English & Old English languages",
+                    "sections": {
+                        "421": "Writing system, phonology, phonetics",
+                        "422": "Etymology of standard English"
+                    }
+                },
+                "430": {
+                    "description": "German & related languages",
+                    "sections": {
+                        "431": "Writing system, phonology, phonetics",
+                        "432": "Etymology of standard German"
+                    }
+                },
+                "440": {
+                    "description": "French & related languages",
+                    "sections": {
+                        "441": "Writing system, phonology, phonetics",
+                        "442": "Etymology of standard French"
+                    }
+                },
+                "450": {
+                    "description": "Italian, Romanian & related languages",
+                    "sections": {
+                        "451": "Writing system, phonology, phonetics",
+                        "452": "Etymology of standard Italian"
+                    }
+                },
+                "460": {
+                    "description": "Spanish, Portuguese, Galician",
+                    "sections": {
+                        "461": "Writing system, phonology, phonetics",
+                        "462": "Etymology of standard Spanish"
+                    }
+                },
+                "470": {
+                    "description": "Latin & Italic languages",
+                    "sections": {
+                        "471": "Writing system, phonology, phonetics",
+                        "472": "Etymology of classical Latin"
+                    }
+                },
+                "480": {
+                    "description": "Classical & modern Greek languages",
+                    "sections": {
+                        "481": "Writing system, phonology, phonetics",
+                        "482": "Etymology of classical Greek"
+                    }
+                },
+                "490": {
+                    "description": "Other languages",
+                    "sections": {
+                        "491": "East Indo-European & Celtic languages",
+                        "492": "Afro-Asiatic languages"
+                    }
+                }
+            }
+        },
+        "500": {
+            "description": "\u2013 Natural Sciences & Mathematics",
+            "divisions": {
+                "510": {
+                    "description": "Mathematics",
+                    "sections": {
+                        "511": "General principles of mathematics",
+                        "512": "Algebra"
+                    }
+                },
+                "520": {
+                    "description": "Astronomy & allied sciences",
+                    "sections": {
+                        "521": "Celestial mechanics",
+                        "522": "Techniques, equipment & materials"
+                    }
+                },
+                "530": {
+                    "description": "Physics",
+                    "sections": {
+                        "531": "Classical mechanics",
+                        "532": "Fluid mechanics"
+                    }
+                },
+                "540": {
+                    "description": "Chemistry & allied sciences",
+                    "sections": {
+                        "541": "Physical chemistry",
+                        "542": "Techniques, equipment & materials"
+                    }
+                },
+                "550": {
+                    "description": "Earth sciences",
+                    "sections": {
+                        "551": "Geology, hydrology, meteorology",
+                        "552": "Petrology"
+                    }
+                },
+                "560": {
+                    "description": "Paleontology; paleozoology",
+                    "sections": {
+                        "561": "Paleobotany; fossil microorganisms",
+                        "562": "Fossil invertebrates"
+                    }
+                },
+                "570": {
+                    "description": "Life sciences; biology",
+                    "sections": {
+                        "571": "Physiology & related subjects",
+                        "572": "Biochemistry"
+                    }
+                },
+                "580": {
+                    "description": "Plants (Botany)",
+                    "sections": {
+                        "581": "Specific topics in natural history of plants",
+                        "582": "Plants noted for characteristics & flowers"
+                    }
+                },
+                "590": {
+                    "description": "Animals (Zoology)",
+                    "sections": {
+                        "591": "Specific topics in natural history of animals",
+                        "592": "Invertebrates"
+                    }
+                }
+            }
+        },
+        "600": {
+            "description": "\u2013 Technology (Applied Sciences)",
+            "divisions": {
+                "610": {
+                    "description": "Medicine and health",
+                    "sections": {
+                        "611": "Human anatomy, cytology, histology",
+                        "612": "Human physiology"
+                    }
+                },
+                "620": {
+                    "description": "Engineering and allied operations",
+                    "sections": {
+                        "621": "Applied physics",
+                        "622": "Mining and related operations"
+                    }
+                },
+                "630": {
+                    "description": "Agriculture and related technologies",
+                    "sections": {
+                        "631": "Techniques, equipment, & materials",
+                        "632": "Plant injuries, diseases, pests"
+                    }
+                },
+                "640": {
+                    "description": "Home and family management",
+                    "sections": {
+                        "641": "Food and drink",
+                        "642": "Meals and table service"
+                    }
+                },
+                "650": {
+                    "description": "Management and auxiliary services",
+                    "sections": {
+                        "651": "Office services",
+                        "652": "Processes of written communication"
+                    }
+                },
+                "660": {
+                    "description": "Chemical engineering",
+                    "sections": {
+                        "661": "Technology of industrial chemicals",
+                        "662": "Explosives, fuels, & related products"
+                    }
+                },
+                "670": {
+                    "description": "Manufacturing",
+                    "sections": {
+                        "671": "Metalworking & primary metal products",
+                        "672": "Iron, steel, & other iron alloys"
+                    }
+                },
+                "680": {
+                    "description": "Manufacture for specific uses",
+                    "sections": {
+                        "681": "Precision instruments & other devices",
+                        "682": "Small forge work (Blacksmithing)"
+                    }
+                },
+                "690": {
+                    "description": "Buildings",
+                    "sections": {
+                        "691": "Building materials",
+                        "692": "Auxiliary construction practices"
+                    }
+                }
+            }
+        },
+        "700": {
+            "description": "\u2013 The Arts",
+            "divisions": {
+                "710": {
+                    "description": "Area planning & landscape architecture",
+                    "sections": {
+                        "711": "Area planning (Civic art)",
+                        "712": "Landscape architecture (Landscape design)"
+                    }
+                },
+                "720": {
+                    "description": "Architecture",
+                    "sections": {
+                        "721": "Architectural materials and structure",
+                        "722": "Architecture to ca. 300"
+                    }
+                },
+                "730": {
+                    "description": "Sculpture & related arts",
+                    "sections": {
+                        "731": "Processes, forms, subjects of sculpture",
+                        "732": "Sculpture to ca. 500"
+                    }
+                },
+                "740": {
+                    "description": "Graphic arts and decorative arts",
+                    "sections": {
+                        "741": "Drawing & drawings",
+                        "742": "Perspective in drawing"
+                    }
+                },
+                "750": {
+                    "description": "Painting",
+                    "sections": {
+                        "751": "Techniques, equipment, materials & forms",
+                        "752": "Color"
+                    }
+                },
+                "760": {
+                    "description": "Printmaking & prints",
+                    "sections": {
+                        "761": "Relief processes (Block printing)",
+                        "763": "Lithographic processes"
+                    }
+                },
+                "770": {
+                    "description": "Photography, computer art, cinematography",
+                    "sections": {
+                        "771": "Techniques, equipment & materials",
+                        "772": "Metallic salt processes"
+                    }
+                },
+                "780": {
+                    "description": "Music",
+                    "sections": {
+                        "781": "General principles and musical forms",
+                        "782": "Vocal music"
+                    }
+                },
+                "790": {
+                    "description": "Recreational & performing arts",
+                    "sections": {
+                        "791": "Public performances",
+                        "792": "Stage presentations"
+                    }
+                }
+            }
+        },
+        "800": {
+            "description": "\u2013 Literature & Rhetoric",
+            "divisions": {
+                "810": {
+                    "description": "American literature in English",
+                    "sections": {
+                        "811": "American poetry in English",
+                        "812": "American drama in English"
+                    }
+                },
+                "820": {
+                    "description": "English & Old English literatures",
+                    "sections": {
+                        "821": "English poetry",
+                        "822": "English drama"
+                    }
+                },
+                "830": {
+                    "description": "German & related literatures",
+                    "sections": {
+                        "831": "German poetry",
+                        "832": "German drama"
+                    }
+                },
+                "840": {
+                    "description": "French and related literatures",
+                    "sections": {
+                        "841": "French poetry",
+                        "842": "French drama"
+                    }
+                },
+                "850": {
+                    "description": "Italian, Romanian & related literatures",
+                    "sections": {
+                        "851": "Italian poetry",
+                        "852": "Italian drama"
+                    }
+                },
+                "860": {
+                    "description": "Spanish & Portuguese literatures",
+                    "sections": {
+                        "861": "Spanish poetry",
+                        "862": "Spanish drama"
+                    }
+                },
+                "870": {
+                    "description": "Latin & related Italic literatures",
+                    "sections": {
+                        "871": "Latin poetry",
+                        "872": "Latin dramatic poetry and drama"
+                    }
+                },
+                "880": {
+                    "description": "Classical Greek & Hellenic literatures",
+                    "sections": {
+                        "881": "Classical Greek poetry",
+                        "882": "Classical Greek dramatic poetry & drama"
+                    }
+                },
+                "890": {
+                    "description": "Literatures of other languages",
+                    "sections": {
+                        "891": "East Indo-European and Celtic literatures",
+                        "892": "Afro-Asiatic literatures"
+                    }
+                }
+            }
+        },
+        "900": {
+            "description": "\u2013 History & Geography",
+            "divisions": {
+                "910": {
+                    "description": "Geography and travel",
+                    "sections": {
+                        "911": "Historical geography",
+                        "912": "Maps and plans of surface of earth"
+                    }
+                },
+                "920": {
+                    "description": "Biography, genealogy, insignia",
+                    "sections": {
+                        "929": "Genealogy, names & insignia"
+                    }
+                },
+                "930": {
+                    "description": "History of ancient world to ca. 499",
+                    "sections": {
+                        "931": "China to 420",
+                        "932": "Egypt to 640"
+                    }
+                },
+                "940": {
+                    "description": "History of Europe",
+                    "sections": {
+                        "941": "British Isles",
+                        "942": "England and Wales"
+                    }
+                },
+                "950": {
+                    "description": "History of Asia",
+                    "sections": {
+                        "951": "China and adjacent areas",
+                        "952": "Japan"
+                    }
+                },
+                "960": {
+                    "description": "History of Africa",
+                    "sections": {
+                        "961": "Tunisia and Libya",
+                        "962": "Egypt, Sudan, South Sudan"
+                    }
+                },
+                "970": {
+                    "description": "History of North America",
+                    "sections": {
+                        "971": "Canada",
+                        "972": "Mexico, Central America, West Indies"
+                    }
+                },
+                "980": {
+                    "description": "History of South America",
+                    "sections": {
+                        "981": "Brazil",
+                        "982": "Argentina"
+                    }
+                },
+                "990": {
+                    "description": "History of other areas",
+                    "sections": {
+                        "993": "New Zealand",
+                        "994": "Australia"
+                    }
+                }
+            }
+        }
+    },
+    "divisions": {
+        "010": "Bibliography",
+        "020": "Library & information sciences",
+        "030": "General encyclopedic works",
+        "050": "General serial publications",
+        "060": "General organizations & museum science",
+        "070": "News media, journalism & publishing",
+        "080": "Quotations",
+        "090": "Manuscripts & rare books",
+        "110": "Metaphysics",
+        "120": "Epistemology",
+        "130": "Parapsychology & occultism",
+        "140": "Specific philosophical schools",
+        "150": "Psychology",
+        "160": "Logic",
+        "170": "Ethics",
+        "180": "Ancient, medieval, & eastern philosophy",
+        "190": "Modern western philosophy",
+        "210": "Philosophy & theory of religion",
+        "220": "Bible",
+        "230": "Christianity",
+        "240": "Christian practice & observance",
+        "250": "Christian pastoral practice & religious orders",
+        "260": "Christian organization, social work & worship",
+        "270": "History of Christianity",
+        "280": "Christian denominations",
+        "290": "Other religions",
+        "310": "Collections of general statistics",
+        "320": "Political science (Politics and government)",
+        "330": "Economics",
+        "340": "Law",
+        "350": "Public administration and military science",
+        "360": "Social problems and services; associations",
+        "370": "Education",
+        "380": "Commerce, communications, transportation",
+        "390": "Customs, etiquette, folklore",
+        "410": "Linguistics",
+        "420": "English & Old English languages",
+        "430": "German & related languages",
+        "440": "French & related languages",
+        "450": "Italian, Romanian & related languages",
+        "460": "Spanish, Portuguese, Galician",
+        "470": "Latin & Italic languages",
+        "480": "Classical & modern Greek languages",
+        "490": "Other languages",
+        "510": "Mathematics",
+        "520": "Astronomy & allied sciences",
+        "530": "Physics",
+        "540": "Chemistry & allied sciences",
+        "550": "Earth sciences",
+        "560": "Paleontology; paleozoology",
+        "570": "Life sciences; biology",
+        "580": "Plants (Botany)",
+        "590": "Animals (Zoology)",
+        "610": "Medicine and health",
+        "620": "Engineering and allied operations",
+        "630": "Agriculture and related technologies",
+        "640": "Home and family management",
+        "650": "Management and auxiliary services",
+        "660": "Chemical engineering",
+        "670": "Manufacturing",
+        "680": "Manufacture for specific uses",
+        "690": "Buildings",
+        "710": "Area planning & landscape architecture",
+        "720": "Architecture",
+        "730": "Sculpture & related arts",
+        "740": "Graphic arts and decorative arts",
+        "750": "Painting",
+        "760": "Printmaking & prints",
+        "770": "Photography, computer art, cinematography",
+        "780": "Music",
+        "790": "Recreational & performing arts",
+        "810": "American literature in English",
+        "820": "English & Old English literatures",
+        "830": "German & related literatures",
+        "840": "French and related literatures",
+        "850": "Italian, Romanian & related literatures",
+        "860": "Spanish & Portuguese literatures",
+        "870": "Latin & related Italic literatures",
+        "880": "Classical Greek & Hellenic literatures",
+        "890": "Literatures of other languages",
+        "910": "Geography and travel",
+        "920": "Biography, genealogy, insignia",
+        "930": "History of ancient world to ca. 499",
+        "940": "History of Europe",
+        "950": "History of Asia",
+        "960": "History of Africa",
+        "970": "History of North America",
+        "980": "History of South America",
+        "990": "History of other areas"
+    },
+    "sections": {
+        "011": "Bibliographies",
+        "012": "Bibliographies of individuals",
+        "021": "Relationships of libraries, archives & information centers",
+        "022": "Administration of physical plant",
+        "031": "Encyclopedias in American English",
+        "032": "Encyclopedias in English",
+        "051": "General serial publications in American English",
+        "052": "General serial publications in English",
+        "061": "Organizations in North America",
+        "062": "Organizations in British Isles; in England",
+        "071": "Newspapers in North America",
+        "072": "Newspapers in British Isles; in England",
+        "081": "Quotations in American English",
+        "082": "Quotations in English",
+        "091": "Manuscripts",
+        "092": "Block books",
+        "111": "Ontology",
+        "113": "Cosmology (Philosophy of nature)",
+        "121": "Epistemology (Theory of knowledge)",
+        "122": "Causation",
+        "131": "Parapsychological and occult methods",
+        "133": "Specific topics in parapsychology & occultism",
+        "141": "Idealism and related systems",
+        "142": "Critical philosophy",
+        "152": "Perception, movement, emotions & drives",
+        "153": "Conscious mental processes & intelligence",
+        "161": "Induction",
+        "162": "Deduction",
+        "171": "Ethical systems",
+        "172": "Political ethics",
+        "181": "Eastern philosophy",
+        "182": "Pre-Socratic Greek philosophies",
+        "191": "Philosophy of United States and Canada",
+        "192": "Philosophy of British Isles\u200b",
+        "211": "Concepts of God",
+        "212": "Existence, knowability & attributes of God",
+        "221": "Old Testament (Tanakh)",
+        "222": "Historical books of Old Testament",
+        "231": "God",
+        "232": "Jesus Christ and his family",
+        "241": "Christian ethics",
+        "242": "Devotional literature",
+        "251": "Preaching (Homiletics)",
+        "252": "Texts of sermons",
+        "261": "Social theology and interreligious relations",
+        "262": "Ecclesiology",
+        "271": "Religious orders in church history",
+        "272": "Persecutions in general church history",
+        "281": "Early church and Eastern churches",
+        "282": "Roman Catholic Church",
+        "292": "Classical religions (Greek & Roman religion)",
+        "293": "Germanic religion",
+        "314": "General statistics of Europe",
+        "315": "General statistics of Asia",
+        "321": "Systems of governments and states",
+        "322": "Relation of state to organized groups",
+        "331": "Labor economics",
+        "332": "Financial economics",
+        "341": "Law of nations",
+        "342": "Constitutional and administrative law",
+        "351": "Public administration",
+        "352": "General considerations of public administration",
+        "361": "Social problems and services",
+        "362": "Social problems and services to groups",
+        "371": "Schools and their activities; special education",
+        "372": "Primary education (Elementary education)",
+        "381": "Commerce (Trade)",
+        "382": "International commerce (Foreign trade)",
+        "391": "Costume and personal appearance",
+        "392": "Customs of life cycle and domestic life",
+        "411": "Writing systems",
+        "412": "Etymology",
+        "421": "Writing system, phonology, phonetics",
+        "422": "Etymology of standard English",
+        "431": "Writing system, phonology, phonetics",
+        "432": "Etymology of standard German",
+        "441": "Writing system, phonology, phonetics",
+        "442": "Etymology of standard French",
+        "451": "Writing system, phonology, phonetics",
+        "452": "Etymology of standard Italian",
+        "461": "Writing system, phonology, phonetics",
+        "462": "Etymology of standard Spanish",
+        "471": "Writing system, phonology, phonetics",
+        "472": "Etymology of classical Latin",
+        "481": "Writing system, phonology, phonetics",
+        "482": "Etymology of classical Greek",
+        "491": "East Indo-European & Celtic languages",
+        "492": "Afro-Asiatic languages",
+        "511": "General principles of mathematics",
+        "512": "Algebra",
+        "521": "Celestial mechanics",
+        "522": "Techniques, equipment & materials",
+        "531": "Classical mechanics",
+        "532": "Fluid mechanics",
+        "541": "Physical chemistry",
+        "542": "Techniques, equipment & materials",
+        "551": "Geology, hydrology, meteorology",
+        "552": "Petrology",
+        "561": "Paleobotany; fossil microorganisms",
+        "562": "Fossil invertebrates",
+        "571": "Physiology & related subjects",
+        "572": "Biochemistry",
+        "581": "Specific topics in natural history of plants",
+        "582": "Plants noted for characteristics & flowers",
+        "591": "Specific topics in natural history of animals",
+        "592": "Invertebrates",
+        "611": "Human anatomy, cytology, histology",
+        "612": "Human physiology",
+        "621": "Applied physics",
+        "622": "Mining and related operations",
+        "631": "Techniques, equipment, & materials",
+        "632": "Plant injuries, diseases, pests",
+        "641": "Food and drink",
+        "642": "Meals and table service",
+        "651": "Office services",
+        "652": "Processes of written communication",
+        "661": "Technology of industrial chemicals",
+        "662": "Explosives, fuels, & related products",
+        "671": "Metalworking & primary metal products",
+        "672": "Iron, steel, & other iron alloys",
+        "681": "Precision instruments & other devices",
+        "682": "Small forge work (Blacksmithing)",
+        "691": "Building materials",
+        "692": "Auxiliary construction practices",
+        "711": "Area planning (Civic art)",
+        "712": "Landscape architecture (Landscape design)",
+        "721": "Architectural materials and structure",
+        "722": "Architecture to ca. 300",
+        "731": "Processes, forms, subjects of sculpture",
+        "732": "Sculpture to ca. 500",
+        "741": "Drawing & drawings",
+        "742": "Perspective in drawing",
+        "751": "Techniques, equipment, materials & forms",
+        "752": "Color",
+        "761": "Relief processes (Block printing)",
+        "763": "Lithographic processes",
+        "771": "Techniques, equipment & materials",
+        "772": "Metallic salt processes",
+        "781": "General principles and musical forms",
+        "782": "Vocal music",
+        "791": "Public performances",
+        "792": "Stage presentations",
+        "811": "American poetry in English",
+        "812": "American drama in English",
+        "821": "English poetry",
+        "822": "English drama",
+        "831": "German poetry",
+        "832": "German drama",
+        "841": "French poetry",
+        "842": "French drama",
+        "851": "Italian poetry",
+        "852": "Italian drama",
+        "861": "Spanish poetry",
+        "862": "Spanish drama",
+        "871": "Latin poetry",
+        "872": "Latin dramatic poetry and drama",
+        "881": "Classical Greek poetry",
+        "882": "Classical Greek dramatic poetry & drama",
+        "891": "East Indo-European and Celtic literatures",
+        "892": "Afro-Asiatic literatures",
+        "911": "Historical geography",
+        "912": "Maps and plans of surface of earth",
+        "929": "Genealogy, names & insignia",
+        "931": "China to 420",
+        "932": "Egypt to 640",
+        "941": "British Isles",
+        "942": "England and Wales",
+        "951": "China and adjacent areas",
+        "952": "Japan",
+        "961": "Tunisia and Libya",
+        "962": "Egypt, Sudan, South Sudan",
+        "971": "Canada",
+        "972": "Mexico, Central America, West Indies",
+        "981": "Brazil",
+        "982": "Argentina",
+        "993": "New Zealand",
+        "994": "Australia"
+    }
+}

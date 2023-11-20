@@ -133,7 +133,7 @@ namespace PROG7132
             this.btnHint.Name = "btnHint";
             this.btnHint.Size = new System.Drawing.Size(75, 23);
             this.btnHint.TabIndex = 11;
-            this.btnHint.Text = "Hint";
+            this.btnHint.Text = "How to Play";
             this.btnHint.UseVisualStyleBackColor = true;
             this.btnHint.Click += new System.EventHandler(this.btnHint_Click);
             // 

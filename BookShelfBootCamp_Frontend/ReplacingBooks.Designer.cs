@@ -6,7 +6,10 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private System.Windows.Forms.ComboBox cboMozartCompositions;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnStop;
         /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
@@ -33,8 +36,15 @@
             this.replaceBooksBar = new System.Windows.Forms.ProgressBar();
             this.btnGenerateCallNumbers = new System.Windows.Forms.Button();
             this.btnCheckOrder = new System.Windows.Forms.Button();
-            this.achievementBadge = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cboMozartCompositions = new System.Windows.Forms.ComboBox();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.songProgressBar = new System.Windows.Forms.ProgressBar();
+            this.achievementBadge = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.achievementBadge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,15 +100,6 @@
             this.btnCheckOrder.UseVisualStyleBackColor = true;
             this.btnCheckOrder.Click += new System.EventHandler(this.btnCheckOrder_Click);
             // 
-            // achievementBadge
-            // 
-            this.achievementBadge.Location = new System.Drawing.Point(487, 3);
-            this.achievementBadge.Name = "achievementBadge";
-            this.achievementBadge.Size = new System.Drawing.Size(196, 154);
-            this.achievementBadge.TabIndex = 15;
-            this.achievementBadge.TabStop = false;
-            this.achievementBadge.Visible = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -110,10 +111,88 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Replacing Books";
             // 
+            // cboMozartCompositions
+            // 
+            this.cboMozartCompositions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMozartCompositions.FormattingEnabled = true;
+            this.cboMozartCompositions.Location = new System.Drawing.Point(689, 34);
+            this.cboMozartCompositions.Name = "cboMozartCompositions";
+            this.cboMozartCompositions.Size = new System.Drawing.Size(200, 21);
+            this.cboMozartCompositions.TabIndex = 17;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Location = new System.Drawing.Point(896, 34);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(50, 23);
+            this.btnPlay.TabIndex = 18;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.Location = new System.Drawing.Point(951, 34);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(58, 23);
+            this.btnPause.TabIndex = 19;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(1015, 34);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(50, 23);
+            this.btnStop.TabIndex = 20;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(690, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(222, 25);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Mozart Media Player";
+            // 
+            // songProgressBar
+            // 
+            this.songProgressBar.Location = new System.Drawing.Point(690, 62);
+            this.songProgressBar.Name = "songProgressBar";
+            this.songProgressBar.Size = new System.Drawing.Size(375, 23);
+            this.songProgressBar.TabIndex = 22;
+            // 
+            // achievementBadge
+            // 
+            this.achievementBadge.Location = new System.Drawing.Point(487, 3);
+            this.achievementBadge.Name = "achievementBadge";
+            this.achievementBadge.Size = new System.Drawing.Size(196, 154);
+            this.achievementBadge.TabIndex = 15;
+            this.achievementBadge.TabStop = false;
+            this.achievementBadge.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "How to Play";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.howToPlay_Click);
+            // 
             // ReplacingBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.songProgressBar);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.achievementBadge);
             this.Controls.Add(this.GeneratedListView);
@@ -121,6 +200,10 @@
             this.Controls.Add(this.replaceBooksBar);
             this.Controls.Add(this.btnGenerateCallNumbers);
             this.Controls.Add(this.btnCheckOrder);
+            this.Controls.Add(this.cboMozartCompositions);
+            this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.btnPause);
+            this.Controls.Add(this.btnStop);
             this.Name = "ReplacingBooks";
             this.Size = new System.Drawing.Size(1080, 798);
             ((System.ComponentModel.ISupportInitialize)(this.achievementBadge)).EndInit();
@@ -138,5 +221,8 @@
         private System.Windows.Forms.Button btnGenerateCallNumbers;
         private System.Windows.Forms.Button btnCheckOrder;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ProgressBar songProgressBar;
+        private System.Windows.Forms.Button button1;
     }
 }
