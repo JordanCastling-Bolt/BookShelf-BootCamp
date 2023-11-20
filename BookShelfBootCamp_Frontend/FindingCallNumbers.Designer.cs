@@ -44,6 +44,7 @@ namespace PROG7132
             this.leaderboardListView = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
             this.howToPlay = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -130,7 +131,7 @@ namespace PROG7132
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 106);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 59);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Size = new System.Drawing.Size(67, 80);
@@ -139,7 +140,7 @@ namespace PROG7132
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(106, 106);
+            this.pictureBox2.Location = new System.Drawing.Point(85, 59);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Size = new System.Drawing.Size(67, 80);
@@ -148,7 +149,7 @@ namespace PROG7132
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(196, 106);
+            this.pictureBox3.Location = new System.Drawing.Point(158, 59);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Padding = new System.Windows.Forms.Padding(5);
             this.pictureBox3.Size = new System.Drawing.Size(67, 80);
@@ -197,10 +198,25 @@ namespace PROG7132
             this.howToPlay.UseVisualStyleBackColor = true;
             this.howToPlay.Click += new System.EventHandler(this.howToPlay_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 163);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(5);
+            this.label4.Size = new System.Drawing.Size(323, 28);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Find the call number for the description below";
+            // 
             // FindingCallNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.howToPlay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.leaderboardListView);
@@ -239,6 +255,7 @@ namespace PROG7132
         private System.Windows.Forms.ListView leaderboardListView;
         private Label label3;
         private Button howToPlay;
+        private Label label4;
     }
 }
 #endregion

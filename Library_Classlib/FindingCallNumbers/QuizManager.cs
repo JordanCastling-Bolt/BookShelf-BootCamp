@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library_Classlib.FindingCallNumbers
 {
@@ -23,7 +21,7 @@ namespace Library_Classlib.FindingCallNumbers
             deweyTree = tree;
             isLastAnswerCorrect = false;
             correctMainClassEntry = null;
-            NewQuestion(); // Initialize the first question
+            NewQuestion(); 
         }
 
         // Method to start a new question by selecting a random section
@@ -106,13 +104,13 @@ namespace Library_Classlib.FindingCallNumbers
         private string GetCurrentStepAnswer()
         {
             // Determine the correct answer based on the current quiz step
-            switch (quizStep)
+            return quizStep switch
             {
-                case 1: return correctMainClassEntry.CallNumber; // Main Class
-                case 2: return correctDivisionEntry.CallNumber;  // Division
-                case 3: return correctSectionEntry.CallNumber;   // Section
-                default: throw new InvalidOperationException("Quiz step is out of range.");
-            }
+                1 => correctMainClassEntry.CallNumber,// Main Class
+                2 => correctDivisionEntry.CallNumber,// Division
+                3 => correctSectionEntry.CallNumber,// Section
+                _ => throw new InvalidOperationException("Quiz step is out of range."),
+            };
         }
 
 
@@ -146,11 +144,7 @@ namespace Library_Classlib.FindingCallNumbers
                     }
                 }
                 List<string> optionsToDisplay = options.Select(o => $"{o.CallNumber} {o.Description}").ToList();
-                Debug.WriteLine("Options provided:");
-                foreach (var option in optionsToDisplay)
-                {
-                    Debug.WriteLine(option);
-                }
+
                 // Return the options in numerical order as a list of formatted strings with call number and description
                 return options.OrderBy(o => o.CallNumber)
                               .Select(o => $"{o.CallNumber} {o.Description}")
@@ -167,6 +161,7 @@ namespace Library_Classlib.FindingCallNumbers
 
                 // Add other call numbers from the same section if available
                 sectionCallNumbers.AddRange(correctSectionEntry.Children.Values
+                    .OrderBy(x => x.CallNumber)
                     .Select(c => c.CallNumber)
                     .Where(c => c != correctSectionEntry.CallNumber));
 
@@ -230,7 +225,7 @@ namespace Library_Classlib.FindingCallNumbers
             options.AddRange(incorrectOptions);
 
             // Shuffle the options
-            options = options.OrderBy(x => random.Next()).ToList();
+            options = options.OrderBy(o => o.CallNumber).ToList();
 
             // Return the options in numerical order as a list of formatted strings with call number and description
             return options.Select(o => $"{o.CallNumber} {o.Description}")

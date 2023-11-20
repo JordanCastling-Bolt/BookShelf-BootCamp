@@ -1,27 +1,36 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace Library_Classlib.FindingCallNumbers
 {
+    /// <summary>
+    /// Represents a tree structure for the Dewey Decimal Classification.
+    /// </summary>
     public class DeweyDecimalTree
     {
+        /// <summary>
+        /// Root of the Dewey Decimal Tree.
+        /// </summary>
         public TreeNode Root { get; set; }
 
+        /// <summary>
+        /// Constructs a DeweyDecimalTree with an initialized root node.
+        /// </summary>
         public DeweyDecimalTree()
         {
             Root = new TreeNode { CallNumber = "Root", Description = "Dewey Decimal Classification" };
         }
 
+        /// <summary>
+        /// Gets a random section description from the Dewey Decimal Tree.
+        /// </summary>
+        /// <returns>A KeyValuePair containing the call number and description of a randomly selected section.</returns>
         public KeyValuePair<string, string> GetRandomSectionDescription()
         {
             var allSections = new List<KeyValuePair<string, string>>();
 
+            // Traverse the tree to collect all section descriptions
             foreach (var mainClass in Root.Children.Values)
             {
                 foreach (var division in mainClass.Children.Values)
@@ -38,12 +47,14 @@ namespace Library_Classlib.FindingCallNumbers
             return allSections[random.Next(allSections.Count)];
         }
 
-        // Method to find a section by its call number
+        /// <summary>
+        /// Finds a section in the Dewey Decimal Tree by its call number.
+        /// </summary>
+        /// <param name="sectionCallNumber">The call number of the section to find.</param>
+        /// <returns>The TreeNode corresponding to the section, or null if not found.</returns>
         public TreeNode FindSectionByCallNumber(string sectionCallNumber)
         {
-            // This needs to be adapted to your tree structure.
-            // Assuming you have a way to directly find a section based on its call number.
-            // This is a placeholder and needs to be implemented.
+            // Search through each division for the specified section call number
             foreach (var mainClass in Root.Children.Values)
             {
                 foreach (var division in mainClass.Children.Values)
@@ -57,15 +68,19 @@ namespace Library_Classlib.FindingCallNumbers
             return null;
         }
 
-
+        /// <summary>
+        /// Builds the Dewey Decimal Tree from a given JSON object.
+        /// </summary>
+        /// <param name="jsonData">JSON object representing the Dewey Decimal Classification.</param>
         public void BuildTree(JObject jsonData)
         {
-            // Iterate over main classes
+            // Iterate over main classes in the JSON data
             foreach (var mainClassProp in jsonData["main_classes"].Children<JProperty>())
             {
                 string mainClassKey = mainClassProp.Name;
                 JObject mainClassValue = (JObject)mainClassProp.Value;
 
+                // Create a node for each main class and add it to the tree
                 var mainClassNode = new TreeNode
                 {
                     CallNumber = mainClassKey,
@@ -74,12 +89,13 @@ namespace Library_Classlib.FindingCallNumbers
                 };
                 Root.Children.Add(mainClassKey, mainClassNode);
 
-                // Iterate over divisions
+                // Iterate over divisions within each main class
                 foreach (var divisionProp in mainClassValue["divisions"].Children<JProperty>())
                 {
                     string divisionKey = divisionProp.Name;
                     JObject divisionValue = (JObject)divisionProp.Value;
 
+                    // Create a node for each division and add it to the main class node
                     var divisionNode = new TreeNode
                     {
                         CallNumber = divisionKey,
@@ -88,10 +104,7 @@ namespace Library_Classlib.FindingCallNumbers
                     };
                     mainClassNode.Children.Add(divisionKey, divisionNode);
 
-                    Console.WriteLine($"Main Class Description: {mainClassNode.Description}");
-
-
-                    // Iterate over sections
+                    // Iterate over sections within each division
                     if (divisionValue["sections"] != null)
                     {
                         foreach (var sectionProp in divisionValue["sections"].Children<JProperty>())
@@ -99,6 +112,7 @@ namespace Library_Classlib.FindingCallNumbers
                             string sectionKey = sectionProp.Name;
                             JToken sectionValue = sectionProp.Value;
 
+                            // Create a node for each section and add it to the division node
                             var sectionNode = new TreeNode
                             {
                                 CallNumber = sectionKey,
