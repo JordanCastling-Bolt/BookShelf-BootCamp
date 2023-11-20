@@ -45,11 +45,6 @@ namespace Library_Classlib.FindingCallNumbers
                 throw new InvalidOperationException("Failed to select a valid main class entry.");
             }
 
-            Debug.WriteLine($"New Question: {randomSection.Value}");
-            Debug.WriteLine($"Correct Main Class Entry: {correctMainClassEntry.CallNumber} - {correctMainClassEntry.Description}");
-            Debug.WriteLine($"Correct Division Entry: {correctDivisionEntry?.CallNumber} - {correctDivisionEntry?.Description}");
-
-
             // Return only the description for the question
             return randomSection.Value;
         }
@@ -72,11 +67,6 @@ namespace Library_Classlib.FindingCallNumbers
 
             // Check if the selected call number matches the correct answer
             isLastAnswerCorrect = (selectedCallNumber == correctAnswer);
-
-            // Log the results
-            Debug.WriteLine($"User selected: {selectedCallNumber}");
-            Debug.WriteLine($"Correct answer: {correctAnswer}");
-            Debug.WriteLine($"Is last answer correct: {isLastAnswerCorrect}");
 
             if (isLastAnswerCorrect)
             {

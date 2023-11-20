@@ -295,7 +295,7 @@ namespace PROG7132
                "How to Play:\n" +
                "1. Drag items from the left (Clues) onto the correct match (Matches). \n" +
                "2. A successful match will remove both items from the lists while an incorrect match will highlight the Clue in red.\n" +
-               "3. Match all items correctly to complete the round.\n" +
+               "3. Match all items correctly to complete the round. Complete 3 rounds to earn the first badge.\n" +
                "4. New rounds will swap Categories and Call Numbers and vice versa. \n" +
                "5. Complete 10 rounds to earn all the badges.\n" +
                " Enjoy ",
