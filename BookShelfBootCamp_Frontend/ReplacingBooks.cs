@@ -370,7 +370,7 @@ namespace PROG7132
                                       "2. Drag and drop the call numbers in the list to arrange them in either Numerical or Alphabetical order.\n" +
                                       "3. Click the 'Check Order' button to submit your arrangement.\n" +
                                       "4. You will receive feedback on your progress. Correct arrangements increase your progress.\n" +
-                                      "5. You can listen to Mozart compositions while playing. Use the media controls to play, pause, or stop the music.\n" +
+                                      "5. You can listen to Mozart compositions while playing. Use the media controls to Play, Pause/Resume, or Stop the music.\n" +
                                       "Good luck and have fun!";
 
             MessageBox.Show(howToPlayMessage, "How to Play");

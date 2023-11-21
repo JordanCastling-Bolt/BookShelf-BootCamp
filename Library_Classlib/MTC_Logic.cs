@@ -72,93 +72,92 @@ namespace Library_Classlib
         /// <returns>A tuple where the first item is the list for the left column and the second item is the list for the right column.</returns>
         public Tuple<List<string>, List<string>> GenerateQuestion(bool isCallNumberToDescription)
         {
-            var leftColumnItems = new List<string>();
-            var rightColumnItems = new List<string>();
-
-            var baseNumbers = Enumerable.Range(0, 10).Select(x => x * 100).ToList();
-            var poolForLeftColumn = new List<string>();
-
             if (isCallNumberToDescription)
             {
-                // Populate the left column with call numbers.
-                foreach (var baseNumber in baseNumbers)
-                {
-                    var randomOffset = rand.Next(0, 100);
-                    var newNumber = baseNumber + randomOffset;
-                    var newNumberStr = newNumber.ToString("D3");
-                    poolForLeftColumn.Add(newNumberStr);
-                }
-
-                while (leftColumnItems.Count < 4)
-                {
-                    var randomItem = poolForLeftColumn[rand.Next(poolForLeftColumn.Count)];
-                    if (!leftColumnItems.Contains(randomItem))
-                    {
-                        leftColumnItems.Add(randomItem);
-                    }
-                }
-
-                foreach (var item in leftColumnItems)
-                {
-                    var baseNumberStr = (int.Parse(item) / 100 * 100).ToString("D3");
-                    rightColumnItems.Add(CallNumberDescriptions[baseNumberStr]);
-                }
-
-                // Add three more random descriptions for variety.
-                while (rightColumnItems.Count < 7)
-                {
-                    var randomDescription = CallNumberDescriptions.Values.ElementAt(rand.Next(CallNumberDescriptions.Values.Count));
-                    if (!rightColumnItems.Contains(randomDescription))
-                    {
-                        rightColumnItems.Add(randomDescription);
-                    }
-                }
+                return GenerateQuestionCallNumberToDescription();
             }
             else
             {
-                // When descriptions are in the left column.
-                while (leftColumnItems.Count < 4)
-                {
-                    var randomDescription = CallNumberDescriptions.Values.ElementAt(rand.Next(CallNumberDescriptions.Values.Count));
-                    if (!leftColumnItems.Contains(randomDescription))
-                    {
-                        leftColumnItems.Add(randomDescription);
-                    }
-                }
+                return GenerateQuestionDescriptionToCallNumber();
+            }
+        }
 
-                foreach (var description in leftColumnItems)
-                {
-                    var baseKey = CallNumberDescriptions.FirstOrDefault(x => x.Value == description).Key;
-                    var randomOffset = rand.Next(0, 100);
-                    var randomCallNumber = int.Parse(baseKey) + randomOffset;
-                    var randomCallNumberStr = randomCallNumber.ToString("D3");
-                    rightColumnItems.Add(randomCallNumberStr);
-                }
+        //Helper methods created instead of deep nesting
+        private Tuple<List<string>, List<string>> GenerateQuestionCallNumberToDescription()
+        {
+            var leftColumnItems = GetRandomCallNumbers(4);
+            var rightColumnItems = leftColumnItems.Select(item => CallNumberDescriptions[GetBaseNumberStr(item)]).ToList();
 
-                // Add three incorrect call numbers for variety.
-                var incorrectCount = 0;
-                while (incorrectCount < 3)
-                {
-                    var randomBase = baseNumbers[rand.Next(baseNumbers.Count)];
-                    var randomOffset = rand.Next(0, 100);
-                    var randomCallNumber = randomBase + randomOffset;
-                    var randomCallNumberStr = randomCallNumber.ToString("D3");
+            AddRandomDescriptions(rightColumnItems, 3); 
+            return Tuple.Create(leftColumnItems, rightColumnItems.OrderBy(_ => rand.Next()).ToList());
+        }
 
-                    var baseKeyForRandom = (randomCallNumber / 100 * 100).ToString("D3");
-                    var descriptionForRandom = CallNumberDescriptions[baseKeyForRandom];
-                    if (!leftColumnItems.Contains(descriptionForRandom))
-                    {
-                        if (!rightColumnItems.Contains(randomCallNumberStr))
-                        {
-                            rightColumnItems.Add(randomCallNumberStr);
-                            incorrectCount++;
-                        }
-                    }
-                }
+        private Tuple<List<string>, List<string>> GenerateQuestionDescriptionToCallNumber()
+        {
+            var leftColumnItems = GetRandomDescriptions(4);
+            var rightColumnItems = leftColumnItems.Select(description => GetRandomCallNumberForDescription(description)).ToList();
+
+            AddRandomCallNumbers(rightColumnItems, 3); 
+            return Tuple.Create(leftColumnItems, rightColumnItems.OrderBy(_ => rand.Next()).ToList());
+        }
+
+        // Helper method to generate a list of random call numbers.
+        // It randomly orders the call numbers and takes the specified count.
+        private List<string> GetRandomCallNumbers(int count)
+        {
+            var allKeys = CallNumberDescriptions.Keys.ToList();
+            return allKeys.OrderBy(x => rand.Next()).Take(count).ToList();
+        }
+
+        // Helper method to generate a list of random descriptions.
+        // It randomly orders the descriptions and takes the specified count.
+        private List<string> GetRandomDescriptions(int count)
+        {
+            return CallNumberDescriptions.Values.OrderBy(x => rand.Next()).Take(count).ToList();
+        }
+
+        // Helper method to add a specified number of additional random descriptions to a list.
+        // It ensures that the added descriptions are not already present in the list.
+        private void AddRandomDescriptions(List<string> descriptions, int additionalCount)
+        {
+            var allDescriptions = new HashSet<string>(CallNumberDescriptions.Values);
+            foreach (var existing in descriptions)
+            {
+                allDescriptions.Remove(existing); 
             }
 
-            // Return shuffled right column items.
-            return Tuple.Create(leftColumnItems, rightColumnItems.OrderBy(_ => rand.Next()).ToList());
+            var additionalDescriptions = allDescriptions.OrderBy(x => rand.Next()).Take(additionalCount).ToList();
+            descriptions.AddRange(additionalDescriptions); 
+        }
+
+        // Helper method to add a specified number of additional random call numbers to a list.
+        // It ensures that the added call numbers are not already present in the list.
+        private void AddRandomCallNumbers(List<string> callNumbers, int additionalCount)
+        {
+            var allCallNumbers = new HashSet<string>(CallNumberDescriptions.Keys);
+            foreach (var existing in callNumbers)
+            {
+                allCallNumbers.Remove(existing); 
+            }
+
+            var additionalCallNumbers = allCallNumbers.OrderBy(x => rand.Next()).Take(additionalCount).ToList();
+            callNumbers.AddRange(additionalCallNumbers); 
+        }
+
+        // Helper method to get a random call number for a given description.
+        // It finds the base call number for the description and adds a random offset.
+        private string GetRandomCallNumberForDescription(string description)
+        {
+            var baseKey = CallNumberDescriptions.FirstOrDefault(x => x.Value == description).Key;
+            return (int.Parse(baseKey) + rand.Next(0, 100)).ToString("D3");
+        }
+
+        // Helper method to get the base call number string from a given call number.
+        // It calculates the base (hundreds) of the call number and returns it as a string.
+        private string GetBaseNumberStr(string callNumber)
+        {
+            return (int.Parse(callNumber) / 100 * 100).ToString("D3");
         }
     }
 }
+

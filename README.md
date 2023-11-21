@@ -3,7 +3,7 @@
 ## Developer Information
 - **Developer**: Jordan Castling-Bolt
 - **Student ID**: ST10114132
-- **Course**: BCAD Year 3 Group 1 : PROG7312 POE Part 2
+- **Course**: BCAD Year 3 Group 1 : PROG7312 POE 
 - **Date**: 2023/10/26
 - **Repo**: https://github.com/JordanCastling-Bolt/BookShelf-BootCamp
 
@@ -42,9 +42,9 @@
     - Click the 'Check Order' button to validate the order. The program will indicate whether the re-order is correct or not at the bottom of the page.
 
 4. **Match the Questions Feature**: 
-    - Drag the correct Clue (left column) to the appropriate Match (right column). 
+    - Drag the correct Clue (left column) onto the appropriate Match (right column). 
     - If the match is correct, both items will disappear from the list.
-    - If the match is incorrect, the dragged item will turn red as an indication.
+    - If the match is incorrect, the clue item will turn red as an indication.
     - Complete 4 correct matches to complete the round.
 
 6. **Progress Tracking**: 
@@ -54,12 +54,21 @@
 7. **Completion**: 
     - Upon successfully completing 10 correct re-orders or matches, a congratulatory message will appear, plus an achievement badge and the progress bar will reset.
 
+8. **Finding Call Numbers**
+    - This interactive game challenges users to identify the correct call number for a given book description.
+    - Players are presented with a description and four main class options to choose from.
+    - Selecting the correct class advances the player to the next level, gradually narrowing down to the exact call number.
+    - Players have 3 lives; a wrong choice results in the loss of a life.
+    - The game ends after losing all lives.
+    - Upon completion, players can enter their user tag to record their score and compete on the leaderboard.
+
 ---
 
 ### Features
 
 - **Replacing Books**: Allows the user to practice organizing books by their call numbers.
 - **Match the Questions**: Enables the user to match descriptions to the correct call numbers to reinforce their understanding.
+- **Finding Call Numbers Game**: An interactive game that challenges users to find the correct call number based on book descriptions, with a leaderboard to encourage competition.
 - **Progress Tracking**: Keeps track of the user's progress in organizing the books and gives a badge for completing the progress bar.
 - **Drag-and-Drop Interface**: Provides an intuitive way to reorder books or match descriptions.
 
